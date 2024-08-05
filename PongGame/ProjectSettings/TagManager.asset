@@ -8,6 +8,10 @@ TagManager:
   - Bottom
   - Upper Foundations
   - Lower Foundations
+  - Bomb
+  - PlayerBarrier
+  - AntagonistBarrier
+  - Antagonist
   layers:
   - Default
   - TransparentFX

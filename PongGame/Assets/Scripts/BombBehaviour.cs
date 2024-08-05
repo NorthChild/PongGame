@@ -7,6 +7,9 @@ public class BombBehaviour : MonoBehaviour
     public float initialSpeed = 10f; // Initial speed of the ball
     public float maxBounceAngle = 75f; // Maximum angle for the ball to bounce off the paddle
     public float minVerticalSpeed = 2f; // Minimum vertical speed to prevent horizontal bouncing
+    public float minHorizontalSpeed = 2f; // Minimum horizontal speed to prevent vertical bouncing
+    public float wallBounceForce = 2.5f; // Force applied by the wall to bounce the ball away
+
     private Rigidbody2D rb;
 
     void Start()
@@ -19,25 +22,31 @@ public class BombBehaviour : MonoBehaviour
     void LaunchBall()
     {
         // Launch the ball in a random direction
-        float randomDirection = Random.Range(0, 2) == 0 ? -1 : 1;
-        rb.velocity = new Vector2(initialSpeed * randomDirection, initialSpeed);
+        float randomAngle = Random.Range(-45f, 45f);
+        Vector2 direction = new Vector2(Mathf.Cos(randomAngle * Mathf.Deg2Rad), Mathf.Sin(randomAngle * Mathf.Deg2Rad)).normalized;
+        rb.velocity = direction * initialSpeed;
     }
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        // Bounce the ball off any obstacle or walls
-        if (collision.gameObject.tag == "Wall" || collision.gameObject.tag == "Obstacle")
+        if (collision.gameObject.CompareTag("Wall") || collision.gameObject.CompareTag("Obstacle"))
         {
             // Reflect the ball's velocity based on the collision normal
             Vector2 reflectDir = Vector2.Reflect(rb.velocity, collision.contacts[0].normal);
             rb.velocity = reflectDir;
 
             // Ensure the ball doesn't get stuck bouncing horizontally
-            EnsureVerticalMovement();
+            EnsureMovement();
+
+            // Apply wall bounce force if the ball is traveling in a straight line
+            if (IsTravelingStraightLine())
+            {
+                Vector2 bounceDirection = collision.contacts[0].normal;
+                rb.AddForce(bounceDirection * wallBounceForce, ForceMode2D.Impulse);
+            }
         }
 
-        // Bounce the ball off the paddle
-        if (collision.gameObject.tag == "Player")
+        if (collision.gameObject.CompareTag("Player") || collision.gameObject.CompareTag("Antagonist") || collision.gameObject.CompareTag("PlayerBarrier") || collision.gameObject.CompareTag("AntagonistBarrier"))
         {
             // Calculate where on the paddle the ball hit
             float hitPoint = (transform.position.x - collision.transform.position.x) / collision.collider.bounds.size.x;
@@ -50,8 +59,18 @@ public class BombBehaviour : MonoBehaviour
             float newVelocityX = initialSpeed * Mathf.Sin(bounceAngle * Mathf.Deg2Rad);
             float newVelocityY = initialSpeed * Mathf.Cos(bounceAngle * Mathf.Deg2Rad);
 
-            // Ensure the ball moves upwards after hitting the paddle
-            rb.velocity = new Vector2(newVelocityX, Mathf.Abs(newVelocityY));
+            // Determine if the ball should move upwards or downwards based on the paddle
+            if (collision.gameObject.CompareTag("Player") || collision.gameObject.CompareTag("PlayerBarrier"))
+            {
+                rb.velocity = new Vector2(newVelocityX, Mathf.Abs(newVelocityY)); // Ensure upward movement
+            }
+            else if (collision.gameObject.CompareTag("Antagonist") || collision.gameObject.CompareTag("AntagonistBarrier"))
+            {
+                rb.velocity = new Vector2(newVelocityX, -Mathf.Abs(newVelocityY)); // Ensure downward movement
+            }
+
+            // Ensure the ball doesn't get stuck bouncing horizontally
+            EnsureMovement();
         }
     }
 
@@ -61,13 +80,34 @@ public class BombBehaviour : MonoBehaviour
         rb.velocity = rb.velocity.normalized * initialSpeed;
     }
 
-    void EnsureVerticalMovement()
+    void EnsureMovement()
     {
-        if (Mathf.Abs(rb.velocity.y) < minVerticalSpeed)
+        Vector2 newVelocity = rb.velocity;
+
+        // Ensure minimum vertical speed
+        if (Mathf.Abs(newVelocity.y) < minVerticalSpeed)
         {
-            float newYVelocity = minVerticalSpeed * Mathf.Sign(rb.velocity.y);
-            rb.velocity = new Vector2(rb.velocity.x, newYVelocity).normalized * initialSpeed;
+            float newYVelocity = minVerticalSpeed * Mathf.Sign(newVelocity.y);
+            newVelocity.y = newYVelocity;
         }
+
+        // Ensure minimum horizontal speed
+        if (Mathf.Abs(newVelocity.x) < minHorizontalSpeed)
+        {
+            float newXVelocity = minHorizontalSpeed * Mathf.Sign(newVelocity.x);
+            newVelocity.x = newXVelocity;
+        }
+
+        // Add slight random perturbation to prevent getting stuck
+        newVelocity.x += Random.Range(-0.1f, 0.1f);
+        newVelocity.y += Random.Range(-0.1f, 0.1f);
+
+        rb.velocity = newVelocity.normalized * initialSpeed;
     }
 
+    bool IsTravelingStraightLine()
+    {
+        // Check if the ball is traveling in a straight horizontal or vertical line
+        return Mathf.Abs(rb.velocity.x) < minHorizontalSpeed || Mathf.Abs(rb.velocity.y) < minVerticalSpeed;
+    }
 }
