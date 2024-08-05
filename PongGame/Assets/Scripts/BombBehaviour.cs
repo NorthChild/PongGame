@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,7 +9,7 @@ public class BombBehaviour : MonoBehaviour
     public float maxBounceAngle = 75f; // Maximum angle for the ball to bounce off the paddle
     public float minVerticalSpeed = 2f; // Minimum vertical speed to prevent horizontal bouncing
     public float minHorizontalSpeed = 2f; // Minimum horizontal speed to prevent vertical bouncing
-    public float wallBounceForce = 2.5f; // Force applied by the wall to bounce the ball away
+    public float wallBounceForce = 55.5f; // Force applied by the wall to bounce the ball away
 
     private Rigidbody2D rb;
 
@@ -22,14 +23,14 @@ public class BombBehaviour : MonoBehaviour
     void LaunchBall()
     {
         // Launch the ball in a random direction
-        float randomAngle = Random.Range(-45f, 45f);
+        float randomAngle = UnityEngine.Random.Range(-45f, 45f);
         Vector2 direction = new Vector2(Mathf.Cos(randomAngle * Mathf.Deg2Rad), Mathf.Sin(randomAngle * Mathf.Deg2Rad)).normalized;
         rb.velocity = direction * initialSpeed;
     }
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Wall") || collision.gameObject.CompareTag("Obstacle"))
+        if (collision.gameObject.CompareTag("Wall"))
         {
             // Reflect the ball's velocity based on the collision normal
             Vector2 reflectDir = Vector2.Reflect(rb.velocity, collision.contacts[0].normal);
@@ -42,7 +43,7 @@ public class BombBehaviour : MonoBehaviour
             if (IsTravelingStraightLine())
             {
                 Vector2 bounceDirection = collision.contacts[0].normal;
-                rb.AddForce(bounceDirection * wallBounceForce, ForceMode2D.Impulse);
+                rb.AddForce(bounceDirection * wallBounceForce, ForceMode2D.Force);
             }
         }
 
@@ -83,6 +84,7 @@ public class BombBehaviour : MonoBehaviour
     void EnsureMovement()
     {
         Vector2 newVelocity = rb.velocity;
+        
 
         // Ensure minimum vertical speed
         if (Mathf.Abs(newVelocity.y) < minVerticalSpeed)
@@ -99,8 +101,8 @@ public class BombBehaviour : MonoBehaviour
         }
 
         // Add slight random perturbation to prevent getting stuck
-        newVelocity.x += Random.Range(-0.1f, 0.1f);
-        newVelocity.y += Random.Range(-0.1f, 0.1f);
+        newVelocity.x += UnityEngine.Random.Range(-0.1f, 0.1f);
+        newVelocity.y += UnityEngine.Random.Range(-0.1f, 0.1f);
 
         rb.velocity = newVelocity.normalized * initialSpeed;
     }
