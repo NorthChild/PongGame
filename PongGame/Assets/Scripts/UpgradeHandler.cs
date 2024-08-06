@@ -46,20 +46,17 @@ public class UpgradeHandler : MonoBehaviour
 
     void Update()
     {
-        // Check for 'L' key press to cycle forward
-        if (Input.GetKeyDown(KeyCode.L))
+        if (Input.GetKeyDown(KeyCode.DownArrow))
         {
             CycleUpgradeParent();
         }
 
-        // Check for 'K' key press to cycle backward
-        if (Input.GetKeyDown(KeyCode.K))
+        if (Input.GetKeyDown(KeyCode.UpArrow))
         {
             CycleUpgradeParentBackward();
         }
 
-        // Check for 'Enter' key press to spend upgrade points and change capsule color
-        if (Input.GetKeyDown(KeyCode.Return))
+        if (Input.GetKeyDown(KeyCode.RightControl))
         {
             SpendUpgradePointsAndChangeCapsuleColor();
         }
