@@ -12,6 +12,15 @@ TagManager:
   - PlayerBarrier
   - AntagonistBarrier
   - Antagonist
+  - Barrier
+  - playerBuilding
+  - antagonistBuilding
+  - playerTurret
+  - antagonistTurret
+  - bullet
+  - destroyedBuilding
+  - playerBullet
+  - antagonistBullet
   layers:
   - Default
   - TransparentFX
@@ -19,10 +28,10 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
+  - playerBullet
+  - antagonistBullet
+  - PlayerBarrier
+  - AntagonistBarrier
   - 
   - 
   - 
