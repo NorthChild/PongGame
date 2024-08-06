@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BarrierBehaviour : MonoBehaviour
 {
-    public float respawnTime = 15f; // Time in seconds before the barrier reappears
+    public float respawnTime; // Time in seconds before the barrier reappears
 
     public SpriteRenderer spriteRenderer;
     public EdgeCollider2D barrierCollider;
@@ -15,6 +15,11 @@ public class BarrierBehaviour : MonoBehaviour
         barrierCollider = GetComponent<EdgeCollider2D>();
     }
 
+    private void Update()
+    {
+        Debug.Log("respawnTime: " + respawnTime);
+    }
+
     void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Bomb"))
@@ -23,7 +28,7 @@ public class BarrierBehaviour : MonoBehaviour
         }
         else if (collision.gameObject.CompareTag("playerBullet"))
         {
-            Debug.Log("player bullet hit");
+            //Debug.Log("player bullet hit");
             // If the barrier is a playerBarrier, the bullet should pass through without affecting it
             if (gameObject.CompareTag("PlayerBarrier"))
             {

@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class TurretBehavior : MonoBehaviour
 {
-    private float fireRate = 10f; // Time in seconds between shots
+    public float fireRate; // Time in seconds between shots
     public GameObject bulletPrefab; // Bullet prefab
     public Transform firePoint; // Point from where the bullet will be fired
     public Transform turretBase; // Base of the turret that will rotate
-    private float bulletSpeed = 25f; // Speed of the bullet
+    public float bulletSpeed; // Speed of the bullet
 
     private float fireTimer = 0f;
 
@@ -16,6 +16,9 @@ public class TurretBehavior : MonoBehaviour
     {
         // Find the closest building
         GameObject closestBuilding = FindClosestBuilding();
+
+        Debug.Log("fire rate: " + fireRate);
+
         if (closestBuilding != null)
         {
             // Aim at the closest building from the turret base
@@ -85,6 +88,7 @@ public class TurretBehavior : MonoBehaviour
         }
 
         // Calculate the direction to the target
+
         Vector3 direction = (target.transform.position - firePoint.position).normalized;
 
         // Set the bullet's velocity
