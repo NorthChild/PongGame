@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.iOS;
 using UnityEngine;
 
 public class BuildingBehaviour : MonoBehaviour
@@ -10,6 +11,7 @@ public class BuildingBehaviour : MonoBehaviour
     private EdgeCollider2D edgeCollider;
     public PlayerUpgradeController playerUpgradeController; // Reference to the UpgradeController
     public AntagonistUpgradeController antagonistUpgradeController; // Reference to the UpgradeController
+    public ScoreController scoreController;
 
     void Start()
     {
@@ -28,38 +30,94 @@ public class BuildingBehaviour : MonoBehaviour
         }
     }
 
+    //void OnCollisionEnter2D(Collision2D collision)
+    //{
+    //    if (collision.gameObject.CompareTag("Bomb") || collision.gameObject.CompareTag("playerBullet") || collision.gameObject.CompareTag("antagonistBullet"))
+    //    {
+
+    //        // Determine the type of bullet that hit the building
+    //        if ((collision.gameObject.CompareTag("playerBullet") && gameObject.CompareTag("antagonistBuilding")) || collision.gameObject.CompareTag("Bomb"))
+    //        {
+    //            //Debug.Log("building collided");
+    //            HandleBuildingDamage();
+    //            // Notify the UpgradeController
+    //            if (playerUpgradeController != null)
+    //            {
+    //                if (scoreController != null)
+    //                {
+    //                    scoreController.AntagonistBuildingDestroyed();
+    //                }
+    //                //Debug.Log("upgrade active");
+    //                playerUpgradeController.AntagonistBuildingDestroyed();
+
+
+    //            }
+    //            // Change the tag of the building
+    //            gameObject.tag = "destroyedBuilding";
+    //        }
+    //        else if ((collision.gameObject.CompareTag("antagonistBullet") && gameObject.CompareTag("playerBuilding")) || collision.gameObject.CompareTag("Bomb"))
+    //        {
+    //            HandleBuildingDamage();
+
+    //            if (scoreController != null)
+    //            {
+    //                scoreController.PlayerBuildingDestroyed();
+    //            }
+
+    //            if (antagonistUpgradeController != null)
+    //            {
+    //                antagonistUpgradeController.PlayerBuildingDestroyed();
+
+
+    //            }
+
+    //            // Change the tag of the building
+    //            gameObject.tag = "destroyedBuilding";
+    //        }
+    //    }
+    //}
     void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Bomb") || collision.gameObject.CompareTag("playerBullet") || collision.gameObject.CompareTag("antagonistBullet"))
         {
-            
-            // Determine the type of bullet that hit the building
-            if ((collision.gameObject.CompareTag("playerBullet") && gameObject.CompareTag("antagonistBuilding")) || collision.gameObject.CompareTag("Bomb"))
+            // Determine if the building hit is an antagonist building hit by a player bullet or a bomb
+            if (gameObject.CompareTag("antagonistBuilding") && (collision.gameObject.CompareTag("playerBullet") || collision.gameObject.CompareTag("Bomb")))
             {
-                //Debug.Log("building collided");
                 HandleBuildingDamage();
-                // Notify the UpgradeController
+                // Notify the ScoreController
+                if (scoreController != null)
+                {
+                    scoreController.AntagonistBuildingDestroyed();
+                }
+                // Notify the PlayerUpgradeController
                 if (playerUpgradeController != null)
                 {
-                    //Debug.Log("upgrade active");
                     playerUpgradeController.AntagonistBuildingDestroyed();
                 }
                 // Change the tag of the building
                 gameObject.tag = "destroyedBuilding";
             }
-            else if ((collision.gameObject.CompareTag("antagonistBullet") && gameObject.CompareTag("playerBuilding")) || collision.gameObject.CompareTag("Bomb"))
+            // Determine if the building hit is a player building hit by an antagonist bullet or a bomb
+            else if (gameObject.CompareTag("playerBuilding") && (collision.gameObject.CompareTag("antagonistBullet") || collision.gameObject.CompareTag("Bomb")))
             {
-                // Notify the UpgradeController
+                HandleBuildingDamage();
+                // Notify the ScoreController
+                if (scoreController != null)
+                {
+                    scoreController.PlayerBuildingDestroyed();
+                }
+                // Notify the AntagonistUpgradeController
                 if (antagonistUpgradeController != null)
                 {
                     antagonistUpgradeController.PlayerBuildingDestroyed();
                 }
-                HandleBuildingDamage();
                 // Change the tag of the building
                 gameObject.tag = "destroyedBuilding";
             }
         }
     }
+
+
 
     void HandleBuildingDamage()
     {
