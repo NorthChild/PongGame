@@ -5,12 +5,15 @@ using UnityEngine;
 public class BuildingBehaviour : MonoBehaviour
 {
     public Sprite damagedSprite; // The sprite to change to when the building is damaged
+    public GameObject explosionPrefab; // Reference to the explosion prefab
     private SpriteRenderer spriteRenderer;
     private BoxCollider2D boxCollider;
     private EdgeCollider2D edgeCollider;
     public PlayerUpgradeController playerUpgradeController; // Reference to the UpgradeController
     public AntagonistUpgradeController antagonistUpgradeController; // Reference to the UpgradeController
     public ScoreController scoreController;
+
+    private bool isDamaged = false; // Flag to ensure the explosion plays only once
 
     void Start()
     {
@@ -20,63 +23,19 @@ public class BuildingBehaviour : MonoBehaviour
 
         if (boxCollider == null)
         {
-            // Debug.LogWarning("BoxCollider2D not found on " + gameObject.name);
+            Debug.LogWarning("BoxCollider2D not found on " + gameObject.name);
         }
 
         if (edgeCollider == null)
         {
-            // Debug.LogWarning("EdgeCollider2D not assigned on " + gameObject.name);
+            Debug.LogWarning("EdgeCollider2D not assigned on " + gameObject.name);
         }
     }
 
-    //void OnCollisionEnter2D(Collision2D collision)
-    //{
-    //    if (collision.gameObject.CompareTag("Bomb") || collision.gameObject.CompareTag("playerBullet") || collision.gameObject.CompareTag("antagonistBullet"))
-    //    {
-
-    //        // Determine the type of bullet that hit the building
-    //        if ((collision.gameObject.CompareTag("playerBullet") && gameObject.CompareTag("antagonistBuilding")) || collision.gameObject.CompareTag("Bomb"))
-    //        {
-    //            //Debug.Log("building collided");
-    //            HandleBuildingDamage();
-    //            // Notify the UpgradeController
-    //            if (playerUpgradeController != null)
-    //            {
-    //                if (scoreController != null)
-    //                {
-    //                    scoreController.AntagonistBuildingDestroyed();
-    //                }
-    //                //Debug.Log("upgrade active");
-    //                playerUpgradeController.AntagonistBuildingDestroyed();
-
-
-    //            }
-    //            // Change the tag of the building
-    //            gameObject.tag = "destroyedBuilding";
-    //        }
-    //        else if ((collision.gameObject.CompareTag("antagonistBullet") && gameObject.CompareTag("playerBuilding")) || collision.gameObject.CompareTag("Bomb"))
-    //        {
-    //            HandleBuildingDamage();
-
-    //            if (scoreController != null)
-    //            {
-    //                scoreController.PlayerBuildingDestroyed();
-    //            }
-
-    //            if (antagonistUpgradeController != null)
-    //            {
-    //                antagonistUpgradeController.PlayerBuildingDestroyed();
-
-
-    //            }
-
-    //            // Change the tag of the building
-    //            gameObject.tag = "destroyedBuilding";
-    //        }
-    //    }
-    //}
     void OnCollisionEnter2D(Collision2D collision)
     {
+        if (isDamaged) return; // If the building is already damaged, do nothing
+
         if (collision.gameObject.CompareTag("Bomb") || collision.gameObject.CompareTag("playerBullet") || collision.gameObject.CompareTag("antagonistBullet"))
         {
             // Determine if the building hit is an antagonist building hit by a player bullet or a bomb
@@ -118,6 +77,9 @@ public class BuildingBehaviour : MonoBehaviour
 
     void HandleBuildingDamage()
     {
+        // Set the building as damaged
+        isDamaged = true;
+
         // Change the sprite to the damaged sprite
         spriteRenderer.sprite = damagedSprite;
 
@@ -125,14 +87,20 @@ public class BuildingBehaviour : MonoBehaviour
         if (boxCollider != null)
         {
             Destroy(boxCollider);
-            // Debug.Log("BoxCollider2D destroyed on " + gameObject.name);
+            Debug.Log("BoxCollider2D destroyed on " + gameObject.name);
         }
 
         // Remove the EdgeCollider2D component if it exists
         if (edgeCollider != null)
         {
             Destroy(edgeCollider);
-            // Debug.Log("EdgeCollider2D destroyed on " + gameObject.name);
+            Debug.Log("EdgeCollider2D destroyed on " + gameObject.name);
+        }
+
+        // Instantiate the explosion at the building's position
+        if (explosionPrefab != null)
+        {
+            Instantiate(explosionPrefab, transform.position, transform.rotation);
         }
     }
 }
