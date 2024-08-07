@@ -18669,7 +18669,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37ad11b9ef0f32b43b737712c8c4a6a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initialSpeed: 65
+  initialSpeed: 100
   maxBounceAngle: 360
   minVerticalSpeed: 100
   minHorizontalSpeed: 100

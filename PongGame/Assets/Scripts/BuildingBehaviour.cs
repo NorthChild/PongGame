@@ -23,12 +23,12 @@ public class BuildingBehaviour : MonoBehaviour
 
         if (boxCollider == null)
         {
-            Debug.LogWarning("BoxCollider2D not found on " + gameObject.name);
+            //Debug.LogWarning("BoxCollider2D not found on " + gameObject.name);
         }
 
         if (edgeCollider == null)
         {
-            Debug.LogWarning("EdgeCollider2D not assigned on " + gameObject.name);
+            //Debug.LogWarning("EdgeCollider2D not assigned on " + gameObject.name);
         }
     }
 
@@ -87,14 +87,14 @@ public class BuildingBehaviour : MonoBehaviour
         if (boxCollider != null)
         {
             Destroy(boxCollider);
-            Debug.Log("BoxCollider2D destroyed on " + gameObject.name);
+            //Debug.Log("BoxCollider2D destroyed on " + gameObject.name);
         }
 
         // Remove the EdgeCollider2D component if it exists
         if (edgeCollider != null)
         {
             Destroy(edgeCollider);
-            Debug.Log("EdgeCollider2D destroyed on " + gameObject.name);
+            //Debug.Log("EdgeCollider2D destroyed on " + gameObject.name);
         }
 
         // Instantiate the explosion at the building's position
