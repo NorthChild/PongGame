@@ -9,6 +9,8 @@ public class InGameMenu : MonoBehaviour
 
     private void Start()
     {
+        Debug.Log("InGameMenu: Start - Setting Time.timeScale to 1");
+        Time.timeScale = 1; // Ensure the game starts unpaused
         if (inGameMenuUI != null)
         {
             inGameMenuUI.SetActive(false); // Ensure the in-game menu UI is hidden at the start
@@ -39,6 +41,7 @@ public class InGameMenu : MonoBehaviour
             inGameMenuUI.SetActive(!isActive);
             overlayPanel.SetActive(!isActive);
             Time.timeScale = isActive ? 1 : 0; // Pause the game when menu is active
+            Debug.Log("InGameMenu: ToggleInGameMenu - Time.timeScale set to " + Time.timeScale);
         }
     }
 
@@ -46,25 +49,27 @@ public class InGameMenu : MonoBehaviour
     {
         if (inGameMenuUI != null && optionsMenuUI != null)
         {
-            bool isActive = inGameMenuUI.activeSelf;
             inGameMenuUI.SetActive(false); // Disable the current in-game menu UI
             optionsMenuUI.SetActive(true); // Enable the options menu UI
-            Time.timeScale = isActive ? 1 : 0; // Pause the game when menu is active
+            Time.timeScale = 0; // Pause the game when options menu is active
+            Debug.Log("InGameMenu: GoToOptions - Time.timeScale set to " + Time.timeScale);
         }
     }
 
     public void GoToMainMenu(string sceneName)
     {
+        Debug.Log("InGameMenu: GoToMainMenu - Setting Time.timeScale to 1");
         Time.timeScale = 1; // Ensure the game is not paused when loading a new scene
         SceneManager.LoadScene(sceneName);
     }
 
     public void QuitGame()
     {
+        Debug.Log("InGameMenu: QuitGame - Quitting the game.");
         Application.Quit();
-    #if UNITY_EDITOR
+#if UNITY_EDITOR
         // If running in the Unity editor, stop playing the game
         UnityEditor.EditorApplication.isPlaying = false;
-    #endif
+#endif
     }
 }

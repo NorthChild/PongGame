@@ -17,7 +17,7 @@ public class BarrierBehaviour : MonoBehaviour
 
     private void Update()
     {
-        Debug.Log("respawnTime: " + respawnTime);
+        //Debug.Log("respawnTime: " + respawnTime);
     }
 
     void OnCollisionEnter2D(Collision2D collision)

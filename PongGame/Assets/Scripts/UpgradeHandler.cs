@@ -130,13 +130,13 @@ public class UpgradeHandler : MonoBehaviour
             // Check if the parent object has already been upgraded 3 times
             if (upgradeCounts[currentParent] >= 3)
             {
-                Debug.Log($"No more upgrades allowed for {currentParent.name}.");
+                //Debug.Log($"No more upgrades allowed for {currentParent.name}.");
                 return;
             }
 
             if (playerUpgradeController.SpendUpgradePoints(2)) // Spend 2 points
             {
-                Debug.Log("2 upgrade points spent.");
+                //Debug.Log("2 upgrade points spent.");
 
                 // Find the next child capsule to upgrade
                 int nextUpgradeIndex = upgradeIndices[currentParent];
@@ -161,12 +161,12 @@ public class UpgradeHandler : MonoBehaviour
                 }
                 else
                 {
-                    Debug.Log("All capsules are already upgraded for this parent object.");
+                    //Debug.Log("All capsules are already upgraded for this parent object.");
                 }
             }
             else
             {
-                Debug.Log("Not enough upgrade points available.");
+                //Debug.Log("Not enough upgrade points available.");
             }
         }
         else

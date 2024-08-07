@@ -17,7 +17,7 @@ public class TurretBehavior : MonoBehaviour
         // Find the closest building
         GameObject closestBuilding = FindClosestBuilding();
 
-        Debug.Log("fire rate: " + fireRate);
+        //Debug.Log("fire rate: " + fireRate);
 
         if (closestBuilding != null)
         {
