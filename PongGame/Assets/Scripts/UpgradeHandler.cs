@@ -134,7 +134,7 @@ public class UpgradeHandler : MonoBehaviour
                 return;
             }
 
-            if (playerUpgradeController.SpendUpgradePoints(2)) // Spend 2 points
+            if (playerUpgradeController.SpendUpgradePoints(4)) // Spend 4 points
             {
                 //Debug.Log("2 upgrade points spent.");
 

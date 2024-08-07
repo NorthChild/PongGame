@@ -9,7 +9,7 @@ public class InGameMenu : MonoBehaviour
 
     private void Start()
     {
-        Debug.Log("InGameMenu: Start - Setting Time.timeScale to 1");
+        //Debug.Log("InGameMenu: Start - Setting Time.timeScale to 1");
         Time.timeScale = 1; // Ensure the game starts unpaused
         if (inGameMenuUI != null)
         {

@@ -26,8 +26,8 @@ public class GameManager : MonoBehaviour
     private void CheckGameStatus()
     {
         UpdateBuildingLists();
-        Debug.Log("Remaining player buildings: " + playerBuildings.Length);
-        Debug.Log("Remaining antagonist buildings: " + antagonistBuildings.Length);
+        //Debug.Log("Remaining player buildings: " + playerBuildings.Length);
+        //Debug.Log("Remaining antagonist buildings: " + antagonistBuildings.Length);
 
         bool allAntagonistBuildingsDestroyed = true;
         foreach (GameObject building in antagonistBuildings)

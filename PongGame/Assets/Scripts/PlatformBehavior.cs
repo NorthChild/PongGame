@@ -46,4 +46,10 @@ public class PlatformBehavior : MonoBehaviour
         clampedPosition.x = Mathf.Clamp(clampedPosition.x, leftBoundary, rightBoundary);
         transform.position = clampedPosition;
     }
+
+    // Method to update the paddle's speed
+    public void SetMoveSpeed(float newSpeed)
+    {
+        moveSpeed = newSpeed;
+    }
 }
