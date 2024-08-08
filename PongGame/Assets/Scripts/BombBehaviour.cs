@@ -1,6 +1,4 @@
-using System;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class BombBehaviour : MonoBehaviour
@@ -24,7 +22,7 @@ public class BombBehaviour : MonoBehaviour
     void LaunchBall()
     {
         // Launch the ball in a random direction
-        float randomAngle = UnityEngine.Random.Range(-45f, 45f);
+        float randomAngle = Random.Range(-45f, 45f);
         Vector2 direction = new Vector2(Mathf.Cos(randomAngle * Mathf.Deg2Rad), Mathf.Sin(randomAngle * Mathf.Deg2Rad)).normalized;
         rb.velocity = direction * initialSpeed;
     }
@@ -33,89 +31,115 @@ public class BombBehaviour : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Wall"))
         {
-            // Reflect the ball's velocity based on the collision normal
-            Vector2 reflectDir = Vector2.Reflect(rb.velocity, collision.contacts[0].normal);
-            rb.velocity = reflectDir;
-
-            // Ensure the ball doesn't get stuck bouncing horizontally
-            EnsureMovement();
-
-            // Apply wall bounce force if the ball is traveling in a straight line
-            if (IsTravelingStraightLine())
-            {
-                Vector2 bounceDirection = collision.contacts[0].normal;
-                rb.AddForce(bounceDirection * wallBounceForce, ForceMode2D.Force);
-            }
+            HandleWallCollision(collision);
         }
-
-        if (collision.gameObject.CompareTag("Player") || collision.gameObject.CompareTag("Antagonist") || collision.gameObject.CompareTag("PlayerBarrier") || collision.gameObject.CompareTag("AntagonistBarrier"))
+        else if (collision.gameObject.CompareTag("Player") || collision.gameObject.CompareTag("Antagonist") || collision.gameObject.CompareTag("PlayerBarrier") || collision.gameObject.CompareTag("AntagonistBarrier"))
         {
-            if (bounceSound != null)
-            {
-                // Create a temporary GameObject to play the sound
-                GameObject soundObject = new GameObject("BuildingDestructionSound");
-                AudioSource audioSource = soundObject.AddComponent<AudioSource>();
-                audioSource.clip = bounceSound;
-                audioSource.Play();
-
-                // Destroy the soundObject after the sound has finished playing
-                Destroy(soundObject, bounceSound.length);
-            }
-
-            // Calculate where on the paddle the ball hit
-            float hitPoint = (transform.position.x - collision.transform.position.x) / collision.collider.bounds.size.x;
-            float bounceAngle = hitPoint * maxBounceAngle;
-
-            // Ensure the ball doesn't slide horizontally by setting a minimum angle
-            bounceAngle = Mathf.Clamp(bounceAngle, -maxBounceAngle, maxBounceAngle);
-
-            // Calculate the new velocity based on the bounce angle
-            float newVelocityX = initialSpeed * Mathf.Sin(bounceAngle * Mathf.Deg2Rad);
-            float newVelocityY = initialSpeed * Mathf.Cos(bounceAngle * Mathf.Deg2Rad);
-
-            // Determine if the ball should move upwards or downwards based on the paddle
-            if (collision.gameObject.CompareTag("Player") || collision.gameObject.CompareTag("PlayerBarrier"))
-            {
-                rb.velocity = new Vector2(newVelocityX, Mathf.Abs(newVelocityY)); // Ensure upward movement
-            }
-            else if (collision.gameObject.CompareTag("Antagonist") || collision.gameObject.CompareTag("AntagonistBarrier"))
-            {
-                rb.velocity = new Vector2(newVelocityX, -Mathf.Abs(newVelocityY)); // Ensure downward movement
-            }
-
-            // Ensure the ball doesn't get stuck bouncing horizontally
-            EnsureMovement();
+            HandlePaddleCollision(collision);
         }
+        else if (collision.gameObject.CompareTag("playerBuilding") || collision.gameObject.CompareTag("antagonistBuilding"))
+        {
+            HandleBuildingCollision(collision);
+        }
+    }
+
+    void HandleWallCollision(Collision2D collision)
+    {
+        if (bounceSound != null)
+        {
+            PlaySound(bounceSound);
+        }
+
+        // Reflect the ball's velocity based on the collision normal
+        Vector2 reflectDir = Vector2.Reflect(rb.velocity, collision.contacts[0].normal);
+        rb.velocity = reflectDir;
+
+        // Apply wall bounce force if the ball is traveling in a straight line
+        if (IsTravelingStraightLine())
+        {
+            Vector2 bounceDirection = collision.contacts[0].normal;
+            rb.AddForce(bounceDirection * wallBounceForce, ForceMode2D.Force);
+        }
+
+        // Ensure the ball doesn't get stuck bouncing horizontally
+        EnsureMovement();
+    }
+
+    void HandlePaddleCollision(Collision2D collision)
+    {
+        if (bounceSound != null)
+        {
+            PlaySound(bounceSound);
+        }
+
+        // Calculate where on the paddle the ball hit
+        float hitPoint = (transform.position.x - collision.transform.position.x) / collision.collider.bounds.size.x;
+        float bounceAngle = hitPoint * maxBounceAngle;
+
+        // Ensure the ball doesn't slide horizontally by setting a minimum angle
+        bounceAngle = Mathf.Clamp(bounceAngle, -maxBounceAngle, maxBounceAngle);
+
+        // Calculate the new velocity based on the bounce angle
+        float newVelocityX = initialSpeed * Mathf.Sin(bounceAngle * Mathf.Deg2Rad);
+        float newVelocityY = initialSpeed * Mathf.Cos(bounceAngle * Mathf.Deg2Rad);
+
+        // Determine if the ball should move upwards or downwards based on the paddle
+        if (collision.gameObject.CompareTag("Player") || collision.gameObject.CompareTag("PlayerBarrier"))
+        {
+            rb.velocity = new Vector2(newVelocityX, Mathf.Abs(newVelocityY)); // Ensure upward movement
+        }
+        else if (collision.gameObject.CompareTag("Antagonist") || collision.gameObject.CompareTag("AntagonistBarrier"))
+        {
+            rb.velocity = new Vector2(newVelocityX, -Mathf.Abs(newVelocityY)); // Ensure downward movement
+        }
+
+        // Ensure the ball doesn't get stuck bouncing horizontally
+        EnsureMovement();
+    }
+
+    void HandleBuildingCollision(Collision2D collision)
+    {
+        if (bounceSound != null)
+        {
+            PlaySound(bounceSound);
+        }
+
+        // Reflect the ball's velocity based on the collision normal
+        Vector2 reflectDir = Vector2.Reflect(rb.velocity, collision.contacts[0].normal);
+        rb.velocity = reflectDir;
+
+        // Ensure the ball doesn't get stuck bouncing horizontally
+        EnsureMovement();
     }
 
     void Update()
     {
         // Normalize the ball's speed to maintain constant speed after collisions
-        rb.velocity = rb.velocity.normalized * initialSpeed;
+        if (rb.velocity.magnitude < initialSpeed)
+        {
+            rb.velocity = rb.velocity.normalized * initialSpeed;
+        }
     }
 
     void EnsureMovement()
     {
         Vector2 newVelocity = rb.velocity;
-        
 
         // Ensure minimum vertical speed
         if (Mathf.Abs(newVelocity.y) < minVerticalSpeed)
         {
-            float newYVelocity = minVerticalSpeed * Mathf.Sign(newVelocity.y);
-            newVelocity.y = newYVelocity;
+            newVelocity.y = minVerticalSpeed * Mathf.Sign(newVelocity.y);
         }
 
         // Ensure minimum horizontal speed
         if (Mathf.Abs(newVelocity.x) < minHorizontalSpeed)
         {
-            float newXVelocity = minHorizontalSpeed * Mathf.Sign(newVelocity.x);
-            newVelocity.x = newXVelocity;
+            newVelocity.x = minHorizontalSpeed * Mathf.Sign(newVelocity.x);
         }
 
         // Add slight random perturbation to prevent getting stuck
-        newVelocity.x += UnityEngine.Random.Range(-0.1f, 0.1f);
-        newVelocity.y += UnityEngine.Random.Range(-0.1f, 0.1f);
+        newVelocity.x += Random.Range(-0.1f, 0.1f);
+        newVelocity.y += Random.Range(-0.1f, 0.1f);
 
         rb.velocity = newVelocity.normalized * initialSpeed;
     }
@@ -124,5 +148,17 @@ public class BombBehaviour : MonoBehaviour
     {
         // Check if the ball is traveling in a straight horizontal or vertical line
         return Mathf.Abs(rb.velocity.x) < minHorizontalSpeed || Mathf.Abs(rb.velocity.y) < minVerticalSpeed;
+    }
+
+    void PlaySound(AudioClip clip)
+    {
+        // Create a temporary GameObject to play the sound
+        GameObject soundObject = new GameObject("BounceSound");
+        AudioSource audioSource = soundObject.AddComponent<AudioSource>();
+        audioSource.clip = clip;
+        audioSource.Play();
+
+        // Destroy the soundObject after the sound has finished playing
+        Destroy(soundObject, clip.length);
     }
 }

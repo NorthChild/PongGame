@@ -31,9 +31,15 @@ public class UIPointsController : MonoBehaviour
     // Method to update the display text
     private void UpdateUpgradePointsDisplay()
     {
+        Debug.Log("test 1, total destruction: " + playerUpgradeController.TotalUpgradePoints);
+        Debug.Log("test 2 points to spend: " + Mathf.FloorToInt(playerUpgradeController.TotalUpgradePoints / 4f));
         if (playerUpgradeController != null && upgradePointsText != null)
         {
-            upgradePointsText.text = playerUpgradeController.TotalUpgradePoints.ToString();
+            // Divide the total upgrade points by 4 and floor the value
+            int displayPoints = Mathf.FloorToInt(playerUpgradeController.TotalUpgradePoints / 4f);
+
+            // Assign the calculated value to the upgradePointsText
+            upgradePointsText.text = displayPoints.ToString();
         }
     }
 }

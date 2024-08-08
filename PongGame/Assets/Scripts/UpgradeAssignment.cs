@@ -61,7 +61,7 @@ public class UpgradeAssignment : MonoBehaviour
     // Method to handle upgrades when notified
     private void HandleUpgradeApplied(GameObject parent, int upgradeCount)
     {
-        Debug.Log(parent.name);
+        //Debug.Log(parent.name);
         switch (parent.name)
         {
             case "turretSpeed":
@@ -97,7 +97,7 @@ public class UpgradeAssignment : MonoBehaviour
         foreach (TurretBehavior turretComponent in playerTurrets)
         {
             turretComponent.bulletSpeed = Mathf.Max(1, turretComponent.bulletSpeed + (2));
-            Debug.Log($"Bullet upgraded: Bullet speed increased by {3} for turret {turretComponent.name}.");
+            //Debug.Log($"Bullet upgraded: Bullet speed increased by {3} for turret {turretComponent.name}.");
         }
     }
 

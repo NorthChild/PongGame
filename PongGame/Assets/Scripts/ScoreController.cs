@@ -68,7 +68,7 @@ public class ScoreController : MonoBehaviour
             playerFillImage.color = Color.green;
         }
 
-        Debug.Log("Player Status Bar Updated: " + playerStatusBar.value);
+        //Debug.Log("Player Status Bar Updated: " + playerStatusBar.value);
     }
 
     void UpdateAntagonistStatusBar()
@@ -89,6 +89,6 @@ public class ScoreController : MonoBehaviour
             antagonistFillImage.color = Color.green;
         }
 
-        Debug.Log("Antagonist Status Bar Updated: " + antagonistStatusBar.value);
+        //Debug.Log("Antagonist Status Bar Updated: " + antagonistStatusBar.value);
     }
 }

@@ -25,14 +25,14 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - IgnoreTrigger
   - Water
   - UI
   - playerBullet
   - antagonistBullet
   - PlayerBarrier
   - AntagonistBarrier
-  - 
+  - Bomb
   - 
   - 
   - 

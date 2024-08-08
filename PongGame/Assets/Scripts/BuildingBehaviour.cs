@@ -6,7 +6,7 @@ public class BuildingBehaviour : MonoBehaviour
 {
     public Sprite damagedSprite; // The sprite to change to when the building is damaged
     public GameObject explosionPrefab; // Reference to the explosion prefab
-    public AudioClip destructionSound; // Sound to play when the bullet is destroyed
+    public AudioClip destructionSound; 
     private SpriteRenderer spriteRenderer;
     private BoxCollider2D boxCollider;
     private EdgeCollider2D edgeCollider;

@@ -3,6 +3,8 @@ using UnityEngine.SceneManagement;
 
 public class MenuNavigationController : MonoBehaviour
 {
+    public AudioClip selectionSound;
+
     public void LoadScene(string sceneName)
     {
         Time.timeScale = 1;

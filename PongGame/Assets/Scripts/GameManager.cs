@@ -67,7 +67,7 @@ public class GameManager : MonoBehaviour
 
     private void WinGame()
     {
-        Debug.Log("You Win!");
+        //Debug.Log("You Win!");
         Time.timeScale = 0; // Pause the game
         overlayPanel.SetActive(true); // Show overlay panel
         winCanvas.SetActive(true); // Show Win Canvas
@@ -75,7 +75,7 @@ public class GameManager : MonoBehaviour
 
     private void LoseGame()
     {
-        Debug.Log("You Lose!");
+        //Debug.Log("You Lose!");
         Time.timeScale = 0; // Pause the game
         overlayPanel.SetActive(true); // Show overlay panel
         loseCanvas.SetActive(true); // Show Lose Canvas

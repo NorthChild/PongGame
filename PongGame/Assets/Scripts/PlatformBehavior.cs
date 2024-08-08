@@ -20,8 +20,8 @@ public class PlatformBehavior : MonoBehaviour
         paddleCollider = GetComponent<BoxCollider2D>();
 
         // Calculate boundaries based on wall positions and paddle size
-        leftBoundary = leftWall.transform.position.x + leftWall.GetComponent<BoxCollider2D>().bounds.extents.x + paddleCollider.bounds.extents.x;
-        rightBoundary = rightWall.transform.position.x - rightWall.GetComponent<BoxCollider2D>().bounds.extents.x - paddleCollider.bounds.extents.x;
+        leftBoundary = leftWall.transform.position.x + leftWall.GetComponent<EdgeCollider2D>().bounds.extents.x + paddleCollider.bounds.extents.x;
+        rightBoundary = rightWall.transform.position.x - rightWall.GetComponent<EdgeCollider2D>().bounds.extents.x - paddleCollider.bounds.extents.x;
     }
 
     void Update()
