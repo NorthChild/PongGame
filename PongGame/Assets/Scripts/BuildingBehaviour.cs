@@ -6,6 +6,7 @@ public class BuildingBehaviour : MonoBehaviour
 {
     public Sprite damagedSprite; // The sprite to change to when the building is damaged
     public GameObject explosionPrefab; // Reference to the explosion prefab
+    public AudioClip destructionSound; // Sound to play when the bullet is destroyed
     private SpriteRenderer spriteRenderer;
     private BoxCollider2D boxCollider;
     private EdgeCollider2D edgeCollider;
@@ -95,6 +96,19 @@ public class BuildingBehaviour : MonoBehaviour
         {
             Destroy(edgeCollider);
             //Debug.Log("EdgeCollider2D destroyed on " + gameObject.name);
+        }
+
+        // Play the destruction sound
+        if (destructionSound != null)
+        {
+            // Create a temporary GameObject to play the sound
+            GameObject soundObject = new GameObject("BuildingDestructionSound");
+            AudioSource audioSource = soundObject.AddComponent<AudioSource>();
+            audioSource.clip = destructionSound;
+            audioSource.Play();
+
+            // Destroy the soundObject after the sound has finished playing
+            Destroy(soundObject, destructionSound.length);
         }
 
         // Instantiate the explosion at the building's position

@@ -147,3 +147,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shooterTag: 
+  bulletExplosionPrefab: {fileID: 5994278066085507671, guid: 45347a56aaf55a54f8ec3494e5a85660, type: 3}
+  destructionSound: {fileID: 8300000, guid: c41d041399a257f4599cd183fd5d47b8, type: 3}

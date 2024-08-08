@@ -10,6 +10,7 @@ public class BombBehaviour : MonoBehaviour
     public float minVerticalSpeed = 2f; // Minimum vertical speed to prevent horizontal bouncing
     public float minHorizontalSpeed = 2f; // Minimum horizontal speed to prevent vertical bouncing
     public float wallBounceForce = 55.5f; // Force applied by the wall to bounce the ball away
+    public AudioClip bounceSound;
 
     private Rigidbody2D rb;
 
@@ -49,6 +50,18 @@ public class BombBehaviour : MonoBehaviour
 
         if (collision.gameObject.CompareTag("Player") || collision.gameObject.CompareTag("Antagonist") || collision.gameObject.CompareTag("PlayerBarrier") || collision.gameObject.CompareTag("AntagonistBarrier"))
         {
+            if (bounceSound != null)
+            {
+                // Create a temporary GameObject to play the sound
+                GameObject soundObject = new GameObject("BuildingDestructionSound");
+                AudioSource audioSource = soundObject.AddComponent<AudioSource>();
+                audioSource.clip = bounceSound;
+                audioSource.Play();
+
+                // Destroy the soundObject after the sound has finished playing
+                Destroy(soundObject, bounceSound.length);
+            }
+
             // Calculate where on the paddle the ball hit
             float hitPoint = (transform.position.x - collision.transform.position.x) / collision.collider.bounds.size.x;
             float bounceAngle = hitPoint * maxBounceAngle;

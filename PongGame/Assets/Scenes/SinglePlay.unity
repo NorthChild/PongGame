@@ -337,6 +337,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 391062695}
     - target: {fileID: 1888815636112958737, guid: 6387628456cf38a479e1454d7c51030f, type: 3}
+      propertyPath: destructionSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 995344392c130b043905054730c5826c, type: 3}
+    - target: {fileID: 1888815636112958737, guid: 6387628456cf38a479e1454d7c51030f, type: 3}
       propertyPath: antagonistUpgradeController
       value: 
       objectReference: {fileID: 117022427}
@@ -497,6 +501,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 391062695}
     - target: {fileID: 2477567247822645261, guid: 2d798e4b62f486c4887ddb2c5b21f9a2, type: 3}
+      propertyPath: destructionSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 995344392c130b043905054730c5826c, type: 3}
+    - target: {fileID: 2477567247822645261, guid: 2d798e4b62f486c4887ddb2c5b21f9a2, type: 3}
       propertyPath: antagonistUpgradeController
       value: 
       objectReference: {fileID: 117022427}
@@ -591,6 +599,10 @@ PrefabInstance:
       propertyPath: scoreController
       value: 
       objectReference: {fileID: 391062695}
+    - target: {fileID: 2477567247822645261, guid: 2d798e4b62f486c4887ddb2c5b21f9a2, type: 3}
+      propertyPath: destructionSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 995344392c130b043905054730c5826c, type: 3}
     - target: {fileID: 2477567247822645261, guid: 2d798e4b62f486c4887ddb2c5b21f9a2, type: 3}
       propertyPath: playerUpgradeController
       value: 
@@ -748,6 +760,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 391062695}
     - target: {fileID: 1163950879292723797, guid: e495200837eedf84b82761c53dfe83a5, type: 3}
+      propertyPath: destructionSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 995344392c130b043905054730c5826c, type: 3}
+    - target: {fileID: 1163950879292723797, guid: e495200837eedf84b82761c53dfe83a5, type: 3}
       propertyPath: playerUpgradeController
       value: 
       objectReference: {fileID: 433986898}
@@ -854,6 +870,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 391062695}
     - target: {fileID: 2477567247822645261, guid: 2d798e4b62f486c4887ddb2c5b21f9a2, type: 3}
+      propertyPath: destructionSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 995344392c130b043905054730c5826c, type: 3}
+    - target: {fileID: 2477567247822645261, guid: 2d798e4b62f486c4887ddb2c5b21f9a2, type: 3}
       propertyPath: playerUpgradeController
       value: 
       objectReference: {fileID: 433986898}
@@ -943,6 +963,10 @@ PrefabInstance:
       propertyPath: scoreController
       value: 
       objectReference: {fileID: 391062695}
+    - target: {fileID: 1888815636112958737, guid: 6387628456cf38a479e1454d7c51030f, type: 3}
+      propertyPath: destructionSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 995344392c130b043905054730c5826c, type: 3}
     - target: {fileID: 1888815636112958737, guid: 6387628456cf38a479e1454d7c51030f, type: 3}
       propertyPath: antagonistUpgradeController
       value: 
@@ -1204,6 +1228,10 @@ PrefabInstance:
       propertyPath: scoreController
       value: 
       objectReference: {fileID: 391062695}
+    - target: {fileID: 2477567247822645261, guid: 2d798e4b62f486c4887ddb2c5b21f9a2, type: 3}
+      propertyPath: destructionSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 995344392c130b043905054730c5826c, type: 3}
     - target: {fileID: 2477567247822645261, guid: 2d798e4b62f486c4887ddb2c5b21f9a2, type: 3}
       propertyPath: antagonistUpgradeController
       value: 
@@ -1495,7 +1523,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &132842801
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1658,6 +1686,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 391062695}
     - target: {fileID: 2477567247822645261, guid: 2d798e4b62f486c4887ddb2c5b21f9a2, type: 3}
+      propertyPath: destructionSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 995344392c130b043905054730c5826c, type: 3}
+    - target: {fileID: 2477567247822645261, guid: 2d798e4b62f486c4887ddb2c5b21f9a2, type: 3}
       propertyPath: antagonistUpgradeController
       value: 
       objectReference: {fileID: 117022427}
@@ -1747,6 +1779,10 @@ PrefabInstance:
       propertyPath: scoreController
       value: 
       objectReference: {fileID: 391062695}
+    - target: {fileID: 2477567247822645261, guid: 2d798e4b62f486c4887ddb2c5b21f9a2, type: 3}
+      propertyPath: destructionSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 995344392c130b043905054730c5826c, type: 3}
     - target: {fileID: 2477567247822645261, guid: 2d798e4b62f486c4887ddb2c5b21f9a2, type: 3}
       propertyPath: playerUpgradeController
       value: 
@@ -1934,6 +1970,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 391062695}
     - target: {fileID: 1888815636112958737, guid: 6387628456cf38a479e1454d7c51030f, type: 3}
+      propertyPath: destructionSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 995344392c130b043905054730c5826c, type: 3}
+    - target: {fileID: 1888815636112958737, guid: 6387628456cf38a479e1454d7c51030f, type: 3}
       propertyPath: playerUpgradeController
       value: 
       objectReference: {fileID: 433986898}
@@ -2023,6 +2063,10 @@ PrefabInstance:
       propertyPath: scoreController
       value: 
       objectReference: {fileID: 391062695}
+    - target: {fileID: 2477567247822645261, guid: 2d798e4b62f486c4887ddb2c5b21f9a2, type: 3}
+      propertyPath: destructionSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 995344392c130b043905054730c5826c, type: 3}
     - target: {fileID: 2477567247822645261, guid: 2d798e4b62f486c4887ddb2c5b21f9a2, type: 3}
       propertyPath: antagonistUpgradeController
       value: 
@@ -2118,6 +2162,10 @@ PrefabInstance:
       propertyPath: scoreController
       value: 
       objectReference: {fileID: 391062695}
+    - target: {fileID: 1888815636112958737, guid: 6387628456cf38a479e1454d7c51030f, type: 3}
+      propertyPath: destructionSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 995344392c130b043905054730c5826c, type: 3}
     - target: {fileID: 1888815636112958737, guid: 6387628456cf38a479e1454d7c51030f, type: 3}
       propertyPath: antagonistUpgradeController
       value: 
@@ -2292,6 +2340,10 @@ PrefabInstance:
       propertyPath: scoreController
       value: 
       objectReference: {fileID: 391062695}
+    - target: {fileID: 2477567247822645261, guid: 2d798e4b62f486c4887ddb2c5b21f9a2, type: 3}
+      propertyPath: destructionSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 995344392c130b043905054730c5826c, type: 3}
     - target: {fileID: 2477567247822645261, guid: 2d798e4b62f486c4887ddb2c5b21f9a2, type: 3}
       propertyPath: antagonistUpgradeController
       value: 
@@ -2509,6 +2561,10 @@ PrefabInstance:
       propertyPath: scoreController
       value: 
       objectReference: {fileID: 391062695}
+    - target: {fileID: 2477567247822645261, guid: 2d798e4b62f486c4887ddb2c5b21f9a2, type: 3}
+      propertyPath: destructionSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 995344392c130b043905054730c5826c, type: 3}
     - target: {fileID: 2477567247822645261, guid: 2d798e4b62f486c4887ddb2c5b21f9a2, type: 3}
       propertyPath: playerUpgradeController
       value: 
@@ -3007,6 +3063,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 391062695}
     - target: {fileID: 1888815636112958737, guid: 6387628456cf38a479e1454d7c51030f, type: 3}
+      propertyPath: destructionSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 995344392c130b043905054730c5826c, type: 3}
+    - target: {fileID: 1888815636112958737, guid: 6387628456cf38a479e1454d7c51030f, type: 3}
       propertyPath: antagonistUpgradeController
       value: 
       objectReference: {fileID: 117022427}
@@ -3181,6 +3241,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 391062695}
     - target: {fileID: 1888815636112958737, guid: 6387628456cf38a479e1454d7c51030f, type: 3}
+      propertyPath: destructionSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 995344392c130b043905054730c5826c, type: 3}
+    - target: {fileID: 1888815636112958737, guid: 6387628456cf38a479e1454d7c51030f, type: 3}
       propertyPath: antagonistUpgradeController
       value: 
       objectReference: {fileID: 117022427}
@@ -3275,6 +3339,10 @@ PrefabInstance:
       propertyPath: scoreController
       value: 
       objectReference: {fileID: 391062695}
+    - target: {fileID: 2477567247822645261, guid: 2d798e4b62f486c4887ddb2c5b21f9a2, type: 3}
+      propertyPath: destructionSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 995344392c130b043905054730c5826c, type: 3}
     - target: {fileID: 2477567247822645261, guid: 2d798e4b62f486c4887ddb2c5b21f9a2, type: 3}
       propertyPath: antagonistUpgradeController
       value: 
@@ -3501,6 +3569,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 391062695}
     - target: {fileID: 1888815636112958737, guid: 6387628456cf38a479e1454d7c51030f, type: 3}
+      propertyPath: destructionSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 995344392c130b043905054730c5826c, type: 3}
+    - target: {fileID: 1888815636112958737, guid: 6387628456cf38a479e1454d7c51030f, type: 3}
       propertyPath: antagonistUpgradeController
       value: 
       objectReference: {fileID: 117022427}
@@ -3591,6 +3663,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 391062695}
     - target: {fileID: 2477567247822645261, guid: 2d798e4b62f486c4887ddb2c5b21f9a2, type: 3}
+      propertyPath: destructionSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 995344392c130b043905054730c5826c, type: 3}
+    - target: {fileID: 2477567247822645261, guid: 2d798e4b62f486c4887ddb2c5b21f9a2, type: 3}
       propertyPath: antagonistUpgradeController
       value: 
       objectReference: {fileID: 117022427}
@@ -3680,6 +3756,10 @@ PrefabInstance:
       propertyPath: scoreController
       value: 
       objectReference: {fileID: 391062695}
+    - target: {fileID: 1888815636112958737, guid: 6387628456cf38a479e1454d7c51030f, type: 3}
+      propertyPath: destructionSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 995344392c130b043905054730c5826c, type: 3}
     - target: {fileID: 1888815636112958737, guid: 6387628456cf38a479e1454d7c51030f, type: 3}
       propertyPath: antagonistUpgradeController
       value: 
@@ -3867,6 +3947,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 391062695}
     - target: {fileID: 2477567247822645261, guid: 2d798e4b62f486c4887ddb2c5b21f9a2, type: 3}
+      propertyPath: destructionSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 995344392c130b043905054730c5826c, type: 3}
+    - target: {fileID: 2477567247822645261, guid: 2d798e4b62f486c4887ddb2c5b21f9a2, type: 3}
       propertyPath: playerUpgradeController
       value: 
       objectReference: {fileID: 433986898}
@@ -4041,6 +4125,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 391062695}
     - target: {fileID: 2477567247822645261, guid: 2d798e4b62f486c4887ddb2c5b21f9a2, type: 3}
+      propertyPath: destructionSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 995344392c130b043905054730c5826c, type: 3}
+    - target: {fileID: 2477567247822645261, guid: 2d798e4b62f486c4887ddb2c5b21f9a2, type: 3}
       propertyPath: antagonistUpgradeController
       value: 
       objectReference: {fileID: 117022427}
@@ -4051,6 +4139,107 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 694056957750029886, guid: 2d798e4b62f486c4887ddb2c5b21f9a2, type: 3}
   m_PrefabInstance: {fileID: 326007077}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &338738143
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 338738144}
+  - component: {fileID: 338738147}
+  - component: {fileID: 338738146}
+  - component: {fileID: 338738145}
+  m_Layer: 0
+  m_Name: playerHealth
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &338738144
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 338738143}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 862751315}
+  m_Father: {fileID: 1511653017}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0, y: 0}
+--- !u!114 &338738145
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 338738143}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+--- !u!114 &338738146
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 338738143}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_UiScaleMode: 0
+  m_ReferencePixelsPerUnit: 100
+  m_ScaleFactor: 1
+  m_ReferenceResolution: {x: 800, y: 600}
+  m_ScreenMatchMode: 0
+  m_MatchWidthOrHeight: 0
+  m_PhysicalUnit: 3
+  m_FallbackScreenDPI: 96
+  m_DefaultSpriteDPI: 96
+  m_DynamicPixelsPerUnit: 1
+  m_PresetInfoIsWorld: 0
+--- !u!223 &338738147
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 338738143}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 0
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_TargetDisplay: 0
 --- !u!1001 &339751407
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4114,6 +4303,10 @@ PrefabInstance:
       propertyPath: scoreController
       value: 
       objectReference: {fileID: 391062695}
+    - target: {fileID: 1163950879292723797, guid: e495200837eedf84b82761c53dfe83a5, type: 3}
+      propertyPath: destructionSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 995344392c130b043905054730c5826c, type: 3}
     - target: {fileID: 1163950879292723797, guid: e495200837eedf84b82761c53dfe83a5, type: 3}
       propertyPath: antagonistUpgradeController
       value: 
@@ -4305,11 +4498,106 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 391062695}
     - target: {fileID: 2477567247822645261, guid: 2d798e4b62f486c4887ddb2c5b21f9a2, type: 3}
+      propertyPath: destructionSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 995344392c130b043905054730c5826c, type: 3}
+    - target: {fileID: 2477567247822645261, guid: 2d798e4b62f486c4887ddb2c5b21f9a2, type: 3}
       propertyPath: playerUpgradeController
       value: 
       objectReference: {fileID: 433986898}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2d798e4b62f486c4887ddb2c5b21f9a2, type: 3}
+--- !u!1 &349682207
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 349682208}
+  - component: {fileID: 349682209}
+  m_Layer: 0
+  m_Name: Slider
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &349682208
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 349682207}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1164445012}
+  - {fileID: 1024946011}
+  - {fileID: 1235421609}
+  m_Father: {fileID: 539084468}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 41.3, y: 508.1}
+  m_SizeDelta: {x: 476.2628, y: 20}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &349682209
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 349682207}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1469440579}
+  m_FillRect: {fileID: 1175598927}
+  m_HandleRect: {fileID: 1469440578}
+  m_Direction: 0
+  m_MinValue: 0
+  m_MaxValue: 60
+  m_WholeNumbers: 0
+  m_Value: 0
+  m_OnValueChanged:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1001 &356885553
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4389,6 +4677,10 @@ PrefabInstance:
       propertyPath: scoreController
       value: 
       objectReference: {fileID: 391062695}
+    - target: {fileID: 2477567247822645261, guid: 2d798e4b62f486c4887ddb2c5b21f9a2, type: 3}
+      propertyPath: destructionSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 995344392c130b043905054730c5826c, type: 3}
     - target: {fileID: 2477567247822645261, guid: 2d798e4b62f486c4887ddb2c5b21f9a2, type: 3}
       propertyPath: playerUpgradeController
       value: 
@@ -4479,6 +4771,10 @@ PrefabInstance:
       propertyPath: scoreController
       value: 
       objectReference: {fileID: 391062695}
+    - target: {fileID: 2477567247822645261, guid: 2d798e4b62f486c4887ddb2c5b21f9a2, type: 3}
+      propertyPath: destructionSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 995344392c130b043905054730c5826c, type: 3}
     - target: {fileID: 2477567247822645261, guid: 2d798e4b62f486c4887ddb2c5b21f9a2, type: 3}
       propertyPath: antagonistUpgradeController
       value: 
@@ -4739,6 +5035,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 391062695}
     - target: {fileID: 1888815636112958737, guid: 6387628456cf38a479e1454d7c51030f, type: 3}
+      propertyPath: destructionSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 995344392c130b043905054730c5826c, type: 3}
+    - target: {fileID: 1888815636112958737, guid: 6387628456cf38a479e1454d7c51030f, type: 3}
       propertyPath: playerUpgradeController
       value: 
       objectReference: {fileID: 433986898}
@@ -4903,6 +5203,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 391062695}
     - target: {fileID: 1888815636112958737, guid: 6387628456cf38a479e1454d7c51030f, type: 3}
+      propertyPath: destructionSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 995344392c130b043905054730c5826c, type: 3}
+    - target: {fileID: 1888815636112958737, guid: 6387628456cf38a479e1454d7c51030f, type: 3}
       propertyPath: playerUpgradeController
       value: 
       objectReference: {fileID: 433986898}
@@ -4953,6 +5257,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreText: {fileID: 550580493}
+  playerStatusBar: {fileID: 862751316}
+  antagonistStatusBar: {fileID: 349682209}
+  totalPlayerBuildings: 60
+  totalAntagonistBuildings: 60
 --- !u!1001 &394579323
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5032,6 +5340,10 @@ PrefabInstance:
       propertyPath: scoreController
       value: 
       objectReference: {fileID: 391062695}
+    - target: {fileID: 1888815636112958737, guid: 6387628456cf38a479e1454d7c51030f, type: 3}
+      propertyPath: destructionSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 995344392c130b043905054730c5826c, type: 3}
     - target: {fileID: 1888815636112958737, guid: 6387628456cf38a479e1454d7c51030f, type: 3}
       propertyPath: antagonistUpgradeController
       value: 
@@ -5123,6 +5435,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 391062695}
     - target: {fileID: 1888815636112958737, guid: 6387628456cf38a479e1454d7c51030f, type: 3}
+      propertyPath: destructionSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 995344392c130b043905054730c5826c, type: 3}
+    - target: {fileID: 1888815636112958737, guid: 6387628456cf38a479e1454d7c51030f, type: 3}
       propertyPath: playerUpgradeController
       value: 
       objectReference: {fileID: 433986898}
@@ -5207,6 +5523,10 @@ PrefabInstance:
       propertyPath: scoreController
       value: 
       objectReference: {fileID: 391062695}
+    - target: {fileID: 2477567247822645261, guid: 2d798e4b62f486c4887ddb2c5b21f9a2, type: 3}
+      propertyPath: destructionSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 995344392c130b043905054730c5826c, type: 3}
     - target: {fileID: 2477567247822645261, guid: 2d798e4b62f486c4887ddb2c5b21f9a2, type: 3}
       propertyPath: antagonistUpgradeController
       value: 
@@ -5521,6 +5841,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 391062695}
     - target: {fileID: 1888815636112958737, guid: 6387628456cf38a479e1454d7c51030f, type: 3}
+      propertyPath: destructionSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 995344392c130b043905054730c5826c, type: 3}
+    - target: {fileID: 1888815636112958737, guid: 6387628456cf38a479e1454d7c51030f, type: 3}
       propertyPath: playerUpgradeController
       value: 
       objectReference: {fileID: 433986898}
@@ -5610,6 +5934,10 @@ PrefabInstance:
       propertyPath: scoreController
       value: 
       objectReference: {fileID: 391062695}
+    - target: {fileID: 2477567247822645261, guid: 2d798e4b62f486c4887ddb2c5b21f9a2, type: 3}
+      propertyPath: destructionSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 995344392c130b043905054730c5826c, type: 3}
     - target: {fileID: 2477567247822645261, guid: 2d798e4b62f486c4887ddb2c5b21f9a2, type: 3}
       propertyPath: playerUpgradeController
       value: 
@@ -5896,6 +6224,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 391062695}
     - target: {fileID: 1888815636112958737, guid: 6387628456cf38a479e1454d7c51030f, type: 3}
+      propertyPath: destructionSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 995344392c130b043905054730c5826c, type: 3}
+    - target: {fileID: 1888815636112958737, guid: 6387628456cf38a479e1454d7c51030f, type: 3}
       propertyPath: antagonistUpgradeController
       value: 
       objectReference: {fileID: 117022427}
@@ -6036,6 +6368,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 391062695}
     - target: {fileID: 2477567247822645261, guid: 2d798e4b62f486c4887ddb2c5b21f9a2, type: 3}
+      propertyPath: destructionSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 995344392c130b043905054730c5826c, type: 3}
+    - target: {fileID: 2477567247822645261, guid: 2d798e4b62f486c4887ddb2c5b21f9a2, type: 3}
       propertyPath: playerUpgradeController
       value: 
       objectReference: {fileID: 433986898}
@@ -6125,6 +6461,10 @@ PrefabInstance:
       propertyPath: scoreController
       value: 
       objectReference: {fileID: 391062695}
+    - target: {fileID: 2477567247822645261, guid: 2d798e4b62f486c4887ddb2c5b21f9a2, type: 3}
+      propertyPath: destructionSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 995344392c130b043905054730c5826c, type: 3}
     - target: {fileID: 2477567247822645261, guid: 2d798e4b62f486c4887ddb2c5b21f9a2, type: 3}
       propertyPath: antagonistUpgradeController
       value: 
@@ -6327,6 +6667,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 391062695}
     - target: {fileID: 2477567247822645261, guid: 2d798e4b62f486c4887ddb2c5b21f9a2, type: 3}
+      propertyPath: destructionSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 995344392c130b043905054730c5826c, type: 3}
+    - target: {fileID: 2477567247822645261, guid: 2d798e4b62f486c4887ddb2c5b21f9a2, type: 3}
       propertyPath: playerUpgradeController
       value: 
       objectReference: {fileID: 433986898}
@@ -6416,6 +6760,10 @@ PrefabInstance:
       propertyPath: scoreController
       value: 
       objectReference: {fileID: 391062695}
+    - target: {fileID: 1888815636112958737, guid: 6387628456cf38a479e1454d7c51030f, type: 3}
+      propertyPath: destructionSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 995344392c130b043905054730c5826c, type: 3}
     - target: {fileID: 1888815636112958737, guid: 6387628456cf38a479e1454d7c51030f, type: 3}
       propertyPath: antagonistUpgradeController
       value: 
@@ -6644,6 +6992,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 391062695}
     - target: {fileID: 1888815636112958737, guid: 6387628456cf38a479e1454d7c51030f, type: 3}
+      propertyPath: destructionSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 995344392c130b043905054730c5826c, type: 3}
+    - target: {fileID: 1888815636112958737, guid: 6387628456cf38a479e1454d7c51030f, type: 3}
       propertyPath: antagonistUpgradeController
       value: 
       objectReference: {fileID: 117022427}
@@ -6861,6 +7213,10 @@ PrefabInstance:
       propertyPath: scoreController
       value: 
       objectReference: {fileID: 391062695}
+    - target: {fileID: 1888815636112958737, guid: 6387628456cf38a479e1454d7c51030f, type: 3}
+      propertyPath: destructionSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 995344392c130b043905054730c5826c, type: 3}
     - target: {fileID: 1888815636112958737, guid: 6387628456cf38a479e1454d7c51030f, type: 3}
       propertyPath: playerUpgradeController
       value: 
@@ -7086,6 +7442,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 391062695}
     - target: {fileID: 1888815636112958737, guid: 6387628456cf38a479e1454d7c51030f, type: 3}
+      propertyPath: destructionSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 995344392c130b043905054730c5826c, type: 3}
+    - target: {fileID: 1888815636112958737, guid: 6387628456cf38a479e1454d7c51030f, type: 3}
       propertyPath: antagonistUpgradeController
       value: 
       objectReference: {fileID: 117022427}
@@ -7096,6 +7456,107 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1372127603809578377, guid: 6387628456cf38a479e1454d7c51030f, type: 3}
   m_PrefabInstance: {fileID: 537134370}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &539084467
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 539084468}
+  - component: {fileID: 539084471}
+  - component: {fileID: 539084470}
+  - component: {fileID: 539084469}
+  m_Layer: 0
+  m_Name: adversaryHealth
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &539084468
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 539084467}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 349682208}
+  m_Father: {fileID: 1511653017}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0, y: 0}
+--- !u!114 &539084469
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 539084467}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+--- !u!114 &539084470
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 539084467}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_UiScaleMode: 0
+  m_ReferencePixelsPerUnit: 100
+  m_ScaleFactor: 1
+  m_ReferenceResolution: {x: 800, y: 600}
+  m_ScreenMatchMode: 0
+  m_MatchWidthOrHeight: 0
+  m_PhysicalUnit: 3
+  m_FallbackScreenDPI: 96
+  m_DefaultSpriteDPI: 96
+  m_DynamicPixelsPerUnit: 1
+  m_PresetInfoIsWorld: 0
+--- !u!223 &539084471
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 539084467}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 0
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_TargetDisplay: 0
 --- !u!1 &550580492
 GameObject:
   m_ObjectHideFlags: 0
@@ -7310,6 +7771,10 @@ PrefabInstance:
       propertyPath: scoreController
       value: 
       objectReference: {fileID: 391062695}
+    - target: {fileID: 2477567247822645261, guid: 2d798e4b62f486c4887ddb2c5b21f9a2, type: 3}
+      propertyPath: destructionSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 995344392c130b043905054730c5826c, type: 3}
     - target: {fileID: 2477567247822645261, guid: 2d798e4b62f486c4887ddb2c5b21f9a2, type: 3}
       propertyPath: antagonistUpgradeController
       value: 
@@ -7705,6 +8170,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 391062695}
     - target: {fileID: 1163950879292723797, guid: e495200837eedf84b82761c53dfe83a5, type: 3}
+      propertyPath: destructionSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 995344392c130b043905054730c5826c, type: 3}
+    - target: {fileID: 1163950879292723797, guid: e495200837eedf84b82761c53dfe83a5, type: 3}
       propertyPath: antagonistUpgradeController
       value: 
       objectReference: {fileID: 117022427}
@@ -7810,6 +8279,10 @@ PrefabInstance:
       propertyPath: scoreController
       value: 
       objectReference: {fileID: 391062695}
+    - target: {fileID: 2477567247822645261, guid: 2d798e4b62f486c4887ddb2c5b21f9a2, type: 3}
+      propertyPath: destructionSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 995344392c130b043905054730c5826c, type: 3}
     - target: {fileID: 2477567247822645261, guid: 2d798e4b62f486c4887ddb2c5b21f9a2, type: 3}
       propertyPath: playerUpgradeController
       value: 
@@ -7964,7 +8437,7 @@ Transform:
   - {fileID: 1599899728}
   - {fileID: 220898021}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &643277909
 PrefabInstance:
@@ -8045,6 +8518,10 @@ PrefabInstance:
       propertyPath: scoreController
       value: 
       objectReference: {fileID: 391062695}
+    - target: {fileID: 1888815636112958737, guid: 6387628456cf38a479e1454d7c51030f, type: 3}
+      propertyPath: destructionSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 995344392c130b043905054730c5826c, type: 3}
     - target: {fileID: 1888815636112958737, guid: 6387628456cf38a479e1454d7c51030f, type: 3}
       propertyPath: antagonistUpgradeController
       value: 
@@ -8135,6 +8612,10 @@ PrefabInstance:
       propertyPath: scoreController
       value: 
       objectReference: {fileID: 391062695}
+    - target: {fileID: 1888815636112958737, guid: 6387628456cf38a479e1454d7c51030f, type: 3}
+      propertyPath: destructionSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 995344392c130b043905054730c5826c, type: 3}
     - target: {fileID: 1888815636112958737, guid: 6387628456cf38a479e1454d7c51030f, type: 3}
       propertyPath: playerUpgradeController
       value: 
@@ -8231,6 +8712,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 391062695}
     - target: {fileID: 2477567247822645261, guid: 2d798e4b62f486c4887ddb2c5b21f9a2, type: 3}
+      propertyPath: destructionSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 995344392c130b043905054730c5826c, type: 3}
+    - target: {fileID: 2477567247822645261, guid: 2d798e4b62f486c4887ddb2c5b21f9a2, type: 3}
       propertyPath: playerUpgradeController
       value: 
       objectReference: {fileID: 433986898}
@@ -8316,6 +8801,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 391062695}
     - target: {fileID: 2477567247822645261, guid: 2d798e4b62f486c4887ddb2c5b21f9a2, type: 3}
+      propertyPath: destructionSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 995344392c130b043905054730c5826c, type: 3}
+    - target: {fileID: 2477567247822645261, guid: 2d798e4b62f486c4887ddb2c5b21f9a2, type: 3}
       propertyPath: antagonistUpgradeController
       value: 
       objectReference: {fileID: 117022427}
@@ -8326,6 +8815,43 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 694056957750029886, guid: 2d798e4b62f486c4887ddb2c5b21f9a2, type: 3}
   m_PrefabInstance: {fileID: 687551659}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &709441445
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 709441446}
+  m_Layer: 0
+  m_Name: Fill Area
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &709441446
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 709441445}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1252360874}
+  m_Father: {fileID: 862751315}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0.25}
+  m_AnchorMax: {x: 1, y: 0.75}
+  m_AnchoredPosition: {x: -5, y: 0}
+  m_SizeDelta: {x: -20, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &714552291
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8388,6 +8914,10 @@ PrefabInstance:
     - target: {fileID: 1040246649797630021, guid: cddaf2e55c9e60848b4a3ca8368056c1, type: 3}
       propertyPath: m_Name
       value: gunTurret_base (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1040246651559677524, guid: cddaf2e55c9e60848b4a3ca8368056c1, type: 3}
+      propertyPath: fireRate
+      value: 15
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cddaf2e55c9e60848b4a3ca8368056c1, type: 3}
@@ -8475,6 +9005,10 @@ PrefabInstance:
       propertyPath: scoreController
       value: 
       objectReference: {fileID: 391062695}
+    - target: {fileID: 1888815636112958737, guid: 6387628456cf38a479e1454d7c51030f, type: 3}
+      propertyPath: destructionSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 995344392c130b043905054730c5826c, type: 3}
     - target: {fileID: 1888815636112958737, guid: 6387628456cf38a479e1454d7c51030f, type: 3}
       propertyPath: playerUpgradeController
       value: 
@@ -8566,6 +9100,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 391062695}
     - target: {fileID: 1888815636112958737, guid: 6387628456cf38a479e1454d7c51030f, type: 3}
+      propertyPath: destructionSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 995344392c130b043905054730c5826c, type: 3}
+    - target: {fileID: 1888815636112958737, guid: 6387628456cf38a479e1454d7c51030f, type: 3}
       propertyPath: antagonistUpgradeController
       value: 
       objectReference: {fileID: 117022427}
@@ -8655,6 +9193,10 @@ PrefabInstance:
       propertyPath: scoreController
       value: 
       objectReference: {fileID: 391062695}
+    - target: {fileID: 1888815636112958737, guid: 6387628456cf38a479e1454d7c51030f, type: 3}
+      propertyPath: destructionSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 995344392c130b043905054730c5826c, type: 3}
     - target: {fileID: 1888815636112958737, guid: 6387628456cf38a479e1454d7c51030f, type: 3}
       propertyPath: antagonistUpgradeController
       value: 
@@ -8934,6 +9476,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 391062695}
     - target: {fileID: 1888815636112958737, guid: 6387628456cf38a479e1454d7c51030f, type: 3}
+      propertyPath: destructionSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 995344392c130b043905054730c5826c, type: 3}
+    - target: {fileID: 1888815636112958737, guid: 6387628456cf38a479e1454d7c51030f, type: 3}
       propertyPath: playerUpgradeController
       value: 
       objectReference: {fileID: 433986898}
@@ -9023,6 +9569,10 @@ PrefabInstance:
       propertyPath: scoreController
       value: 
       objectReference: {fileID: 391062695}
+    - target: {fileID: 1888815636112958737, guid: 6387628456cf38a479e1454d7c51030f, type: 3}
+      propertyPath: destructionSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 995344392c130b043905054730c5826c, type: 3}
     - target: {fileID: 1888815636112958737, guid: 6387628456cf38a479e1454d7c51030f, type: 3}
       propertyPath: antagonistUpgradeController
       value: 
@@ -9114,6 +9664,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 391062695}
     - target: {fileID: 2477567247822645261, guid: 2d798e4b62f486c4887ddb2c5b21f9a2, type: 3}
+      propertyPath: destructionSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 995344392c130b043905054730c5826c, type: 3}
+    - target: {fileID: 2477567247822645261, guid: 2d798e4b62f486c4887ddb2c5b21f9a2, type: 3}
       propertyPath: playerUpgradeController
       value: 
       objectReference: {fileID: 433986898}
@@ -9203,6 +9757,10 @@ PrefabInstance:
       propertyPath: scoreController
       value: 
       objectReference: {fileID: 391062695}
+    - target: {fileID: 2477567247822645261, guid: 2d798e4b62f486c4887ddb2c5b21f9a2, type: 3}
+      propertyPath: destructionSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 995344392c130b043905054730c5826c, type: 3}
     - target: {fileID: 2477567247822645261, guid: 2d798e4b62f486c4887ddb2c5b21f9a2, type: 3}
       propertyPath: playerUpgradeController
       value: 
@@ -9516,6 +10074,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 391062695}
     - target: {fileID: 2477567247822645261, guid: 2d798e4b62f486c4887ddb2c5b21f9a2, type: 3}
+      propertyPath: destructionSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 995344392c130b043905054730c5826c, type: 3}
+    - target: {fileID: 2477567247822645261, guid: 2d798e4b62f486c4887ddb2c5b21f9a2, type: 3}
       propertyPath: playerUpgradeController
       value: 
       objectReference: {fileID: 433986898}
@@ -9606,6 +10168,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 391062695}
     - target: {fileID: 1888815636112958737, guid: 6387628456cf38a479e1454d7c51030f, type: 3}
+      propertyPath: destructionSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 995344392c130b043905054730c5826c, type: 3}
+    - target: {fileID: 1888815636112958737, guid: 6387628456cf38a479e1454d7c51030f, type: 3}
       propertyPath: playerUpgradeController
       value: 
       objectReference: {fileID: 433986898}
@@ -9686,6 +10252,97 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1040246649797630016, guid: cddaf2e55c9e60848b4a3ca8368056c1, type: 3}
   m_PrefabInstance: {fileID: 859083410}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &862751314
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 862751315}
+  - component: {fileID: 862751316}
+  m_Layer: 0
+  m_Name: Slider
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &862751315
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 862751314}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1431092515}
+  - {fileID: 709441446}
+  - {fileID: 966523827}
+  m_Father: {fileID: 338738144}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 79.8, y: -507.8}
+  m_SizeDelta: {x: 476.2628, y: 20}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &862751316
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 862751314}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1653849389}
+  m_FillRect: {fileID: 1252360874}
+  m_HandleRect: {fileID: 1653849388}
+  m_Direction: 0
+  m_MinValue: 0
+  m_MaxValue: 60
+  m_WholeNumbers: 0
+  m_Value: 0
+  m_OnValueChanged:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &868417428
 GameObject:
   m_ObjectHideFlags: 0
@@ -9984,6 +10641,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 391062695}
     - target: {fileID: 2477567247822645261, guid: 2d798e4b62f486c4887ddb2c5b21f9a2, type: 3}
+      propertyPath: destructionSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 995344392c130b043905054730c5826c, type: 3}
+    - target: {fileID: 2477567247822645261, guid: 2d798e4b62f486c4887ddb2c5b21f9a2, type: 3}
       propertyPath: antagonistUpgradeController
       value: 
       objectReference: {fileID: 117022427}
@@ -10078,6 +10739,10 @@ PrefabInstance:
       propertyPath: scoreController
       value: 
       objectReference: {fileID: 391062695}
+    - target: {fileID: 2477567247822645261, guid: 2d798e4b62f486c4887ddb2c5b21f9a2, type: 3}
+      propertyPath: destructionSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 995344392c130b043905054730c5826c, type: 3}
     - target: {fileID: 2477567247822645261, guid: 2d798e4b62f486c4887ddb2c5b21f9a2, type: 3}
       propertyPath: playerUpgradeController
       value: 
@@ -10273,6 +10938,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 391062695}
     - target: {fileID: 2477567247822645261, guid: 2d798e4b62f486c4887ddb2c5b21f9a2, type: 3}
+      propertyPath: destructionSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 995344392c130b043905054730c5826c, type: 3}
+    - target: {fileID: 2477567247822645261, guid: 2d798e4b62f486c4887ddb2c5b21f9a2, type: 3}
       propertyPath: playerUpgradeController
       value: 
       objectReference: {fileID: 433986898}
@@ -10357,6 +11026,10 @@ PrefabInstance:
       propertyPath: scoreController
       value: 
       objectReference: {fileID: 391062695}
+    - target: {fileID: 2477567247822645261, guid: 2d798e4b62f486c4887ddb2c5b21f9a2, type: 3}
+      propertyPath: destructionSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 995344392c130b043905054730c5826c, type: 3}
     - target: {fileID: 2477567247822645261, guid: 2d798e4b62f486c4887ddb2c5b21f9a2, type: 3}
       propertyPath: playerUpgradeController
       value: 
@@ -10486,6 +11159,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 391062695}
     - target: {fileID: 2477567247822645261, guid: 2d798e4b62f486c4887ddb2c5b21f9a2, type: 3}
+      propertyPath: destructionSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 995344392c130b043905054730c5826c, type: 3}
+    - target: {fileID: 2477567247822645261, guid: 2d798e4b62f486c4887ddb2c5b21f9a2, type: 3}
       propertyPath: antagonistUpgradeController
       value: 
       objectReference: {fileID: 117022427}
@@ -10576,6 +11253,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 391062695}
     - target: {fileID: 1888815636112958737, guid: 6387628456cf38a479e1454d7c51030f, type: 3}
+      propertyPath: destructionSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 995344392c130b043905054730c5826c, type: 3}
+    - target: {fileID: 1888815636112958737, guid: 6387628456cf38a479e1454d7c51030f, type: 3}
       propertyPath: playerUpgradeController
       value: 
       objectReference: {fileID: 433986898}
@@ -10586,6 +11267,43 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1372127603809578377, guid: 6387628456cf38a479e1454d7c51030f, type: 3}
   m_PrefabInstance: {fileID: 966279104}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &966523826
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 966523827}
+  m_Layer: 0
+  m_Name: Handle Slide Area
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &966523827
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 966523826}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1653849388}
+  m_Father: {fileID: 862751315}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: -20, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!4 &966713722 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 694056957750029886, guid: 2d798e4b62f486c4887ddb2c5b21f9a2, type: 3}
@@ -10654,6 +11372,10 @@ PrefabInstance:
       propertyPath: scoreController
       value: 
       objectReference: {fileID: 391062695}
+    - target: {fileID: 1163950879292723797, guid: e495200837eedf84b82761c53dfe83a5, type: 3}
+      propertyPath: destructionSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 995344392c130b043905054730c5826c, type: 3}
     - target: {fileID: 1163950879292723797, guid: e495200837eedf84b82761c53dfe83a5, type: 3}
       propertyPath: antagonistUpgradeController
       value: 
@@ -10760,6 +11482,10 @@ PrefabInstance:
       propertyPath: scoreController
       value: 
       objectReference: {fileID: 391062695}
+    - target: {fileID: 1888815636112958737, guid: 6387628456cf38a479e1454d7c51030f, type: 3}
+      propertyPath: destructionSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 995344392c130b043905054730c5826c, type: 3}
     - target: {fileID: 1888815636112958737, guid: 6387628456cf38a479e1454d7c51030f, type: 3}
       propertyPath: antagonistUpgradeController
       value: 
@@ -10958,6 +11684,10 @@ PrefabInstance:
       propertyPath: scoreController
       value: 
       objectReference: {fileID: 391062695}
+    - target: {fileID: 1888815636112958737, guid: 6387628456cf38a479e1454d7c51030f, type: 3}
+      propertyPath: destructionSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 995344392c130b043905054730c5826c, type: 3}
     - target: {fileID: 1888815636112958737, guid: 6387628456cf38a479e1454d7c51030f, type: 3}
       propertyPath: antagonistUpgradeController
       value: 
@@ -11387,6 +12117,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 391062695}
     - target: {fileID: 1888815636112958737, guid: 6387628456cf38a479e1454d7c51030f, type: 3}
+      propertyPath: destructionSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 995344392c130b043905054730c5826c, type: 3}
+    - target: {fileID: 1888815636112958737, guid: 6387628456cf38a479e1454d7c51030f, type: 3}
       propertyPath: antagonistUpgradeController
       value: 
       objectReference: {fileID: 117022427}
@@ -11402,6 +12136,43 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 694056957750029886, guid: 2d798e4b62f486c4887ddb2c5b21f9a2, type: 3}
   m_PrefabInstance: {fileID: 935576251}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1024946010
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1024946011}
+  m_Layer: 0
+  m_Name: Fill Area
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1024946011
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1024946010}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1175598927}
+  m_Father: {fileID: 349682208}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0.25}
+  m_AnchorMax: {x: 1, y: 0.75}
+  m_AnchoredPosition: {x: -5, y: 0}
+  m_SizeDelta: {x: -20, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &1047485703
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11481,6 +12252,10 @@ PrefabInstance:
       propertyPath: scoreController
       value: 
       objectReference: {fileID: 391062695}
+    - target: {fileID: 1888815636112958737, guid: 6387628456cf38a479e1454d7c51030f, type: 3}
+      propertyPath: destructionSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 995344392c130b043905054730c5826c, type: 3}
     - target: {fileID: 1888815636112958737, guid: 6387628456cf38a479e1454d7c51030f, type: 3}
       propertyPath: playerUpgradeController
       value: 
@@ -11673,6 +12448,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 391062695}
     - target: {fileID: 2477567247822645261, guid: 2d798e4b62f486c4887ddb2c5b21f9a2, type: 3}
+      propertyPath: destructionSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 995344392c130b043905054730c5826c, type: 3}
+    - target: {fileID: 2477567247822645261, guid: 2d798e4b62f486c4887ddb2c5b21f9a2, type: 3}
       propertyPath: playerUpgradeController
       value: 
       objectReference: {fileID: 433986898}
@@ -11746,6 +12525,10 @@ PrefabInstance:
       propertyPath: scoreController
       value: 
       objectReference: {fileID: 391062695}
+    - target: {fileID: 1163950879292723797, guid: e495200837eedf84b82761c53dfe83a5, type: 3}
+      propertyPath: destructionSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 995344392c130b043905054730c5826c, type: 3}
     - target: {fileID: 1163950879292723797, guid: e495200837eedf84b82761c53dfe83a5, type: 3}
       propertyPath: playerUpgradeController
       value: 
@@ -11853,11 +12636,115 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 391062695}
     - target: {fileID: 2477567247822645261, guid: 2d798e4b62f486c4887ddb2c5b21f9a2, type: 3}
+      propertyPath: destructionSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 995344392c130b043905054730c5826c, type: 3}
+    - target: {fileID: 2477567247822645261, guid: 2d798e4b62f486c4887ddb2c5b21f9a2, type: 3}
       propertyPath: playerUpgradeController
       value: 
       objectReference: {fileID: 433986898}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2d798e4b62f486c4887ddb2c5b21f9a2, type: 3}
+--- !u!1 &1066135784
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1066135785}
+  - component: {fileID: 1066135788}
+  - component: {fileID: 1066135787}
+  - component: {fileID: 1066135786}
+  m_Layer: 5
+  m_Name: Canvas
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1066135785
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1066135784}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1511653017}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0, y: 0}
+--- !u!114 &1066135786
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1066135784}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+--- !u!114 &1066135787
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1066135784}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_UiScaleMode: 0
+  m_ReferencePixelsPerUnit: 100
+  m_ScaleFactor: 1
+  m_ReferenceResolution: {x: 800, y: 600}
+  m_ScreenMatchMode: 0
+  m_MatchWidthOrHeight: 0
+  m_PhysicalUnit: 3
+  m_FallbackScreenDPI: 96
+  m_DefaultSpriteDPI: 96
+  m_DynamicPixelsPerUnit: 1
+  m_PresetInfoIsWorld: 0
+--- !u!223 &1066135788
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1066135784}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 0
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_TargetDisplay: 0
 --- !u!1001 &1066288090
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11937,6 +12824,10 @@ PrefabInstance:
       propertyPath: scoreController
       value: 
       objectReference: {fileID: 391062695}
+    - target: {fileID: 1888815636112958737, guid: 6387628456cf38a479e1454d7c51030f, type: 3}
+      propertyPath: destructionSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 995344392c130b043905054730c5826c, type: 3}
     - target: {fileID: 1888815636112958737, guid: 6387628456cf38a479e1454d7c51030f, type: 3}
       propertyPath: playerUpgradeController
       value: 
@@ -12413,6 +13304,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 391062695}
     - target: {fileID: 1888815636112958737, guid: 6387628456cf38a479e1454d7c51030f, type: 3}
+      propertyPath: destructionSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 995344392c130b043905054730c5826c, type: 3}
+    - target: {fileID: 1888815636112958737, guid: 6387628456cf38a479e1454d7c51030f, type: 3}
       propertyPath: antagonistUpgradeController
       value: 
       objectReference: {fileID: 117022427}
@@ -12688,6 +13583,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 391062695}
     - target: {fileID: 1888815636112958737, guid: 6387628456cf38a479e1454d7c51030f, type: 3}
+      propertyPath: destructionSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 995344392c130b043905054730c5826c, type: 3}
+    - target: {fileID: 1888815636112958737, guid: 6387628456cf38a479e1454d7c51030f, type: 3}
       propertyPath: playerUpgradeController
       value: 
       objectReference: {fileID: 433986898}
@@ -12756,6 +13655,10 @@ PrefabInstance:
       propertyPath: scoreController
       value: 
       objectReference: {fileID: 391062695}
+    - target: {fileID: 1163950879292723797, guid: e495200837eedf84b82761c53dfe83a5, type: 3}
+      propertyPath: destructionSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 995344392c130b043905054730c5826c, type: 3}
     - target: {fileID: 1163950879292723797, guid: e495200837eedf84b82761c53dfe83a5, type: 3}
       propertyPath: antagonistUpgradeController
       value: 
@@ -12961,6 +13864,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 391062695}
     - target: {fileID: 1888815636112958737, guid: 6387628456cf38a479e1454d7c51030f, type: 3}
+      propertyPath: destructionSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 995344392c130b043905054730c5826c, type: 3}
+    - target: {fileID: 1888815636112958737, guid: 6387628456cf38a479e1454d7c51030f, type: 3}
       propertyPath: antagonistUpgradeController
       value: 
       objectReference: {fileID: 117022427}
@@ -13050,6 +13957,10 @@ PrefabInstance:
       propertyPath: scoreController
       value: 
       objectReference: {fileID: 391062695}
+    - target: {fileID: 2477567247822645261, guid: 2d798e4b62f486c4887ddb2c5b21f9a2, type: 3}
+      propertyPath: destructionSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 995344392c130b043905054730c5826c, type: 3}
     - target: {fileID: 2477567247822645261, guid: 2d798e4b62f486c4887ddb2c5b21f9a2, type: 3}
       propertyPath: antagonistUpgradeController
       value: 
@@ -13141,6 +14052,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 391062695}
     - target: {fileID: 1888815636112958737, guid: 6387628456cf38a479e1454d7c51030f, type: 3}
+      propertyPath: destructionSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 995344392c130b043905054730c5826c, type: 3}
+    - target: {fileID: 1888815636112958737, guid: 6387628456cf38a479e1454d7c51030f, type: 3}
       propertyPath: antagonistUpgradeController
       value: 
       objectReference: {fileID: 117022427}
@@ -13230,6 +14145,10 @@ PrefabInstance:
       propertyPath: scoreController
       value: 
       objectReference: {fileID: 391062695}
+    - target: {fileID: 2477567247822645261, guid: 2d798e4b62f486c4887ddb2c5b21f9a2, type: 3}
+      propertyPath: destructionSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 995344392c130b043905054730c5826c, type: 3}
     - target: {fileID: 2477567247822645261, guid: 2d798e4b62f486c4887ddb2c5b21f9a2, type: 3}
       propertyPath: antagonistUpgradeController
       value: 
@@ -13321,6 +14240,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 391062695}
     - target: {fileID: 1888815636112958737, guid: 6387628456cf38a479e1454d7c51030f, type: 3}
+      propertyPath: destructionSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 995344392c130b043905054730c5826c, type: 3}
+    - target: {fileID: 1888815636112958737, guid: 6387628456cf38a479e1454d7c51030f, type: 3}
       propertyPath: antagonistUpgradeController
       value: 
       objectReference: {fileID: 117022427}
@@ -13400,6 +14323,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 391062695}
     - target: {fileID: 1163950879292723797, guid: e495200837eedf84b82761c53dfe83a5, type: 3}
+      propertyPath: destructionSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 995344392c130b043905054730c5826c, type: 3}
+    - target: {fileID: 1163950879292723797, guid: e495200837eedf84b82761c53dfe83a5, type: 3}
       propertyPath: playerUpgradeController
       value: 
       objectReference: {fileID: 433986898}
@@ -13426,6 +14353,82 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 435592011445074780, guid: e495200837eedf84b82761c53dfe83a5, type: 3}
   m_PrefabInstance: {fileID: 1161329425}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1164445011
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1164445012}
+  - component: {fileID: 1164445014}
+  - component: {fileID: 1164445013}
+  m_Layer: 0
+  m_Name: Background
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1164445012
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1164445011}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 349682208}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0.25}
+  m_AnchorMax: {x: 1, y: 0.75}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1164445013
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1164445011}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.5566038, g: 0.5566038, b: 0.5566038, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1164445014
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1164445011}
+  m_CullTransparentMesh: 1
 --- !u!1 &1167279218
 GameObject:
   m_ObjectHideFlags: 0
@@ -13563,6 +14566,82 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1167279218}
   m_CullTransparentMesh: 1
+--- !u!1 &1175598926
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1175598927}
+  - component: {fileID: 1175598929}
+  - component: {fileID: 1175598928}
+  m_Layer: 0
+  m_Name: Fill
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1175598927
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1175598926}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1024946011}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 10, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1175598928
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1175598926}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.012815925, g: 0.9056604, b: 0.03596072, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1175598929
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1175598926}
+  m_CullTransparentMesh: 1
 --- !u!4 &1179124948 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1372127603809578377, guid: 6387628456cf38a479e1454d7c51030f, type: 3}
@@ -13647,6 +14726,10 @@ PrefabInstance:
       propertyPath: scoreController
       value: 
       objectReference: {fileID: 391062695}
+    - target: {fileID: 2477567247822645261, guid: 2d798e4b62f486c4887ddb2c5b21f9a2, type: 3}
+      propertyPath: destructionSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 995344392c130b043905054730c5826c, type: 3}
     - target: {fileID: 2477567247822645261, guid: 2d798e4b62f486c4887ddb2c5b21f9a2, type: 3}
       propertyPath: playerUpgradeController
       value: 
@@ -13829,6 +14912,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 391062695}
     - target: {fileID: 2477567247822645261, guid: 2d798e4b62f486c4887ddb2c5b21f9a2, type: 3}
+      propertyPath: destructionSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 995344392c130b043905054730c5826c, type: 3}
+    - target: {fileID: 2477567247822645261, guid: 2d798e4b62f486c4887ddb2c5b21f9a2, type: 3}
       propertyPath: playerUpgradeController
       value: 
       objectReference: {fileID: 433986898}
@@ -13913,6 +15000,10 @@ PrefabInstance:
       propertyPath: scoreController
       value: 
       objectReference: {fileID: 391062695}
+    - target: {fileID: 1888815636112958737, guid: 6387628456cf38a479e1454d7c51030f, type: 3}
+      propertyPath: destructionSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 995344392c130b043905054730c5826c, type: 3}
     - target: {fileID: 1888815636112958737, guid: 6387628456cf38a479e1454d7c51030f, type: 3}
       propertyPath: playerUpgradeController
       value: 
@@ -14100,6 +15191,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 391062695}
     - target: {fileID: 1888815636112958737, guid: 6387628456cf38a479e1454d7c51030f, type: 3}
+      propertyPath: destructionSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 995344392c130b043905054730c5826c, type: 3}
+    - target: {fileID: 1888815636112958737, guid: 6387628456cf38a479e1454d7c51030f, type: 3}
       propertyPath: antagonistUpgradeController
       value: 
       objectReference: {fileID: 117022427}
@@ -14211,6 +15306,43 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!1 &1235421608
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1235421609}
+  m_Layer: 0
+  m_Name: Handle Slide Area
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1235421609
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1235421608}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1469440578}
+  m_Father: {fileID: 349682208}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: -20, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!4 &1238096901 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 694056957750029886, guid: 2d798e4b62f486c4887ddb2c5b21f9a2, type: 3}
@@ -14295,6 +15427,10 @@ PrefabInstance:
       propertyPath: scoreController
       value: 
       objectReference: {fileID: 391062695}
+    - target: {fileID: 2477567247822645261, guid: 2d798e4b62f486c4887ddb2c5b21f9a2, type: 3}
+      propertyPath: destructionSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 995344392c130b043905054730c5826c, type: 3}
     - target: {fileID: 2477567247822645261, guid: 2d798e4b62f486c4887ddb2c5b21f9a2, type: 3}
       propertyPath: antagonistUpgradeController
       value: 
@@ -14461,6 +15597,82 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 694056957750029886, guid: 2d798e4b62f486c4887ddb2c5b21f9a2, type: 3}
   m_PrefabInstance: {fileID: 1293407569}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1252360873
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1252360874}
+  - component: {fileID: 1252360876}
+  - component: {fileID: 1252360875}
+  m_Layer: 0
+  m_Name: Fill
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1252360874
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1252360873}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 709441446}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 10, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1252360875
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1252360873}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.012815925, g: 0.9056604, b: 0.03596072, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1252360876
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1252360873}
+  m_CullTransparentMesh: 1
 --- !u!1001 &1252448558
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14540,6 +15752,10 @@ PrefabInstance:
       propertyPath: scoreController
       value: 
       objectReference: {fileID: 391062695}
+    - target: {fileID: 2477567247822645261, guid: 2d798e4b62f486c4887ddb2c5b21f9a2, type: 3}
+      propertyPath: destructionSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 995344392c130b043905054730c5826c, type: 3}
     - target: {fileID: 2477567247822645261, guid: 2d798e4b62f486c4887ddb2c5b21f9a2, type: 3}
       propertyPath: antagonistUpgradeController
       value: 
@@ -14636,6 +15852,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 391062695}
     - target: {fileID: 2477567247822645261, guid: 2d798e4b62f486c4887ddb2c5b21f9a2, type: 3}
+      propertyPath: destructionSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 995344392c130b043905054730c5826c, type: 3}
+    - target: {fileID: 2477567247822645261, guid: 2d798e4b62f486c4887ddb2c5b21f9a2, type: 3}
       propertyPath: playerUpgradeController
       value: 
       objectReference: {fileID: 433986898}
@@ -14720,6 +15940,10 @@ PrefabInstance:
       propertyPath: scoreController
       value: 
       objectReference: {fileID: 391062695}
+    - target: {fileID: 1888815636112958737, guid: 6387628456cf38a479e1454d7c51030f, type: 3}
+      propertyPath: destructionSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 995344392c130b043905054730c5826c, type: 3}
     - target: {fileID: 1888815636112958737, guid: 6387628456cf38a479e1454d7c51030f, type: 3}
       propertyPath: playerUpgradeController
       value: 
@@ -14895,6 +16119,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 391062695}
     - target: {fileID: 2477567247822645261, guid: 2d798e4b62f486c4887ddb2c5b21f9a2, type: 3}
+      propertyPath: destructionSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 995344392c130b043905054730c5826c, type: 3}
+    - target: {fileID: 2477567247822645261, guid: 2d798e4b62f486c4887ddb2c5b21f9a2, type: 3}
       propertyPath: antagonistUpgradeController
       value: 
       objectReference: {fileID: 117022427}
@@ -14984,6 +16212,10 @@ PrefabInstance:
       propertyPath: scoreController
       value: 
       objectReference: {fileID: 391062695}
+    - target: {fileID: 2477567247822645261, guid: 2d798e4b62f486c4887ddb2c5b21f9a2, type: 3}
+      propertyPath: destructionSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 995344392c130b043905054730c5826c, type: 3}
     - target: {fileID: 2477567247822645261, guid: 2d798e4b62f486c4887ddb2c5b21f9a2, type: 3}
       propertyPath: playerUpgradeController
       value: 
@@ -15159,6 +16391,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 391062695}
     - target: {fileID: 1888815636112958737, guid: 6387628456cf38a479e1454d7c51030f, type: 3}
+      propertyPath: destructionSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 995344392c130b043905054730c5826c, type: 3}
+    - target: {fileID: 1888815636112958737, guid: 6387628456cf38a479e1454d7c51030f, type: 3}
       propertyPath: antagonistUpgradeController
       value: 
       objectReference: {fileID: 117022427}
@@ -15248,6 +16484,10 @@ PrefabInstance:
       propertyPath: scoreController
       value: 
       objectReference: {fileID: 391062695}
+    - target: {fileID: 2477567247822645261, guid: 2d798e4b62f486c4887ddb2c5b21f9a2, type: 3}
+      propertyPath: destructionSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 995344392c130b043905054730c5826c, type: 3}
     - target: {fileID: 2477567247822645261, guid: 2d798e4b62f486c4887ddb2c5b21f9a2, type: 3}
       propertyPath: antagonistUpgradeController
       value: 
@@ -15339,6 +16579,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 391062695}
     - target: {fileID: 2477567247822645261, guid: 2d798e4b62f486c4887ddb2c5b21f9a2, type: 3}
+      propertyPath: destructionSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 995344392c130b043905054730c5826c, type: 3}
+    - target: {fileID: 2477567247822645261, guid: 2d798e4b62f486c4887ddb2c5b21f9a2, type: 3}
       propertyPath: antagonistUpgradeController
       value: 
       objectReference: {fileID: 117022427}
@@ -15428,6 +16672,10 @@ PrefabInstance:
       propertyPath: scoreController
       value: 
       objectReference: {fileID: 391062695}
+    - target: {fileID: 1888815636112958737, guid: 6387628456cf38a479e1454d7c51030f, type: 3}
+      propertyPath: destructionSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 995344392c130b043905054730c5826c, type: 3}
     - target: {fileID: 1888815636112958737, guid: 6387628456cf38a479e1454d7c51030f, type: 3}
       propertyPath: antagonistUpgradeController
       value: 
@@ -15528,6 +16776,82 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 694056957750029886, guid: 2d798e4b62f486c4887ddb2c5b21f9a2, type: 3}
   m_PrefabInstance: {fileID: 1565117077}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1431092514
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1431092515}
+  - component: {fileID: 1431092517}
+  - component: {fileID: 1431092516}
+  m_Layer: 0
+  m_Name: Background
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1431092515
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1431092514}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 862751315}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0.25}
+  m_AnchorMax: {x: 1, y: 0.75}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1431092516
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1431092514}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.5566038, g: 0.5566038, b: 0.5566038, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1431092517
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1431092514}
+  m_CullTransparentMesh: 1
 --- !u!1 &1434198586
 GameObject:
   m_ObjectHideFlags: 0
@@ -15641,7 +16965,7 @@ Transform:
   - {fileID: 1976872816}
   - {fileID: 1199043312}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1466863912
 PrefabInstance:
@@ -15723,6 +17047,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 391062695}
     - target: {fileID: 2477567247822645261, guid: 2d798e4b62f486c4887ddb2c5b21f9a2, type: 3}
+      propertyPath: destructionSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 995344392c130b043905054730c5826c, type: 3}
+    - target: {fileID: 2477567247822645261, guid: 2d798e4b62f486c4887ddb2c5b21f9a2, type: 3}
       propertyPath: antagonistUpgradeController
       value: 
       objectReference: {fileID: 117022427}
@@ -15733,6 +17061,82 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 694056957750029886, guid: 2d798e4b62f486c4887ddb2c5b21f9a2, type: 3}
   m_PrefabInstance: {fileID: 1466863912}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1469440577
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1469440578}
+  - component: {fileID: 1469440580}
+  - component: {fileID: 1469440579}
+  m_Layer: 0
+  m_Name: Handle
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1469440578
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1469440577}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1235421609}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 20, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1469440579
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1469440577}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1469440580
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1469440577}
+  m_CullTransparentMesh: 1
 --- !u!1001 &1471354440
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15812,6 +17216,10 @@ PrefabInstance:
       propertyPath: scoreController
       value: 
       objectReference: {fileID: 391062695}
+    - target: {fileID: 1888815636112958737, guid: 6387628456cf38a479e1454d7c51030f, type: 3}
+      propertyPath: destructionSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 995344392c130b043905054730c5826c, type: 3}
     - target: {fileID: 1888815636112958737, guid: 6387628456cf38a479e1454d7c51030f, type: 3}
       propertyPath: playerUpgradeController
       value: 
@@ -15902,6 +17310,10 @@ PrefabInstance:
       propertyPath: scoreController
       value: 
       objectReference: {fileID: 391062695}
+    - target: {fileID: 2477567247822645261, guid: 2d798e4b62f486c4887ddb2c5b21f9a2, type: 3}
+      propertyPath: destructionSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 995344392c130b043905054730c5826c, type: 3}
     - target: {fileID: 2477567247822645261, guid: 2d798e4b62f486c4887ddb2c5b21f9a2, type: 3}
       propertyPath: playerUpgradeController
       value: 
@@ -16161,6 +17573,9 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 132842801}
+  - {fileID: 338738144}
+  - {fileID: 539084468}
+  - {fileID: 1066135785}
   m_Father: {fileID: 945905821}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -16243,6 +17658,10 @@ PrefabInstance:
       propertyPath: scoreController
       value: 
       objectReference: {fileID: 391062695}
+    - target: {fileID: 2477567247822645261, guid: 2d798e4b62f486c4887ddb2c5b21f9a2, type: 3}
+      propertyPath: destructionSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 995344392c130b043905054730c5826c, type: 3}
     - target: {fileID: 2477567247822645261, guid: 2d798e4b62f486c4887ddb2c5b21f9a2, type: 3}
       propertyPath: antagonistUpgradeController
       value: 
@@ -16733,6 +18152,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 391062695}
     - target: {fileID: 2477567247822645261, guid: 2d798e4b62f486c4887ddb2c5b21f9a2, type: 3}
+      propertyPath: destructionSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 995344392c130b043905054730c5826c, type: 3}
+    - target: {fileID: 2477567247822645261, guid: 2d798e4b62f486c4887ddb2c5b21f9a2, type: 3}
       propertyPath: playerUpgradeController
       value: 
       objectReference: {fileID: 433986898}
@@ -17044,6 +18467,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 391062695}
     - target: {fileID: 2477567247822645261, guid: 2d798e4b62f486c4887ddb2c5b21f9a2, type: 3}
+      propertyPath: destructionSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 995344392c130b043905054730c5826c, type: 3}
+    - target: {fileID: 2477567247822645261, guid: 2d798e4b62f486c4887ddb2c5b21f9a2, type: 3}
       propertyPath: playerUpgradeController
       value: 
       objectReference: {fileID: 433986898}
@@ -17129,6 +18556,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 391062695}
     - target: {fileID: 1888815636112958737, guid: 6387628456cf38a479e1454d7c51030f, type: 3}
+      propertyPath: destructionSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 995344392c130b043905054730c5826c, type: 3}
+    - target: {fileID: 1888815636112958737, guid: 6387628456cf38a479e1454d7c51030f, type: 3}
       propertyPath: playerUpgradeController
       value: 
       objectReference: {fileID: 433986898}
@@ -17172,7 +18603,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8416981123240410865, guid: 5b15a9baead7cc245a445600b3a28beb, type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8416981123240410865, guid: 5b15a9baead7cc245a445600b3a28beb, type: 3}
       propertyPath: m_LocalScale.x
@@ -17712,6 +19143,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 391062695}
     - target: {fileID: 2477567247822645261, guid: 2d798e4b62f486c4887ddb2c5b21f9a2, type: 3}
+      propertyPath: destructionSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 995344392c130b043905054730c5826c, type: 3}
+    - target: {fileID: 2477567247822645261, guid: 2d798e4b62f486c4887ddb2c5b21f9a2, type: 3}
       propertyPath: playerUpgradeController
       value: 
       objectReference: {fileID: 433986898}
@@ -17876,6 +19311,82 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1040246649797630016, guid: cddaf2e55c9e60848b4a3ca8368056c1, type: 3}
   m_PrefabInstance: {fileID: 1649783559}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1653849387
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1653849388}
+  - component: {fileID: 1653849390}
+  - component: {fileID: 1653849389}
+  m_Layer: 0
+  m_Name: Handle
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1653849388
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1653849387}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 966523827}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 20, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1653849389
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1653849387}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1653849390
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1653849387}
+  m_CullTransparentMesh: 1
 --- !u!1 &1666949418
 GameObject:
   m_ObjectHideFlags: 0
@@ -18003,6 +19514,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 391062695}
     - target: {fileID: 1888815636112958737, guid: 6387628456cf38a479e1454d7c51030f, type: 3}
+      propertyPath: destructionSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 995344392c130b043905054730c5826c, type: 3}
+    - target: {fileID: 1888815636112958737, guid: 6387628456cf38a479e1454d7c51030f, type: 3}
       propertyPath: antagonistUpgradeController
       value: 
       objectReference: {fileID: 117022427}
@@ -18092,6 +19607,10 @@ PrefabInstance:
       propertyPath: scoreController
       value: 
       objectReference: {fileID: 391062695}
+    - target: {fileID: 2477567247822645261, guid: 2d798e4b62f486c4887ddb2c5b21f9a2, type: 3}
+      propertyPath: destructionSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 995344392c130b043905054730c5826c, type: 3}
     - target: {fileID: 2477567247822645261, guid: 2d798e4b62f486c4887ddb2c5b21f9a2, type: 3}
       propertyPath: playerUpgradeController
       value: 
@@ -18382,6 +19901,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 391062695}
     - target: {fileID: 2477567247822645261, guid: 2d798e4b62f486c4887ddb2c5b21f9a2, type: 3}
+      propertyPath: destructionSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 995344392c130b043905054730c5826c, type: 3}
+    - target: {fileID: 2477567247822645261, guid: 2d798e4b62f486c4887ddb2c5b21f9a2, type: 3}
       propertyPath: playerUpgradeController
       value: 
       objectReference: {fileID: 433986898}
@@ -18565,6 +20088,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 391062695}
     - target: {fileID: 2477567247822645261, guid: 2d798e4b62f486c4887ddb2c5b21f9a2, type: 3}
+      propertyPath: destructionSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 995344392c130b043905054730c5826c, type: 3}
+    - target: {fileID: 2477567247822645261, guid: 2d798e4b62f486c4887ddb2c5b21f9a2, type: 3}
       propertyPath: playerUpgradeController
       value: 
       objectReference: {fileID: 433986898}
@@ -18674,6 +20201,7 @@ MonoBehaviour:
   minVerticalSpeed: 100
   minHorizontalSpeed: 100
   wallBounceForce: 52.5
+  bounceSound: {fileID: 8300000, guid: 4dec70f687ad60449b4a76824ed20a56, type: 3}
 --- !u!50 &1737499551
 Rigidbody2D:
   serializedVersion: 4
@@ -18902,6 +20430,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 391062695}
     - target: {fileID: 2477567247822645261, guid: 2d798e4b62f486c4887ddb2c5b21f9a2, type: 3}
+      propertyPath: destructionSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 995344392c130b043905054730c5826c, type: 3}
+    - target: {fileID: 2477567247822645261, guid: 2d798e4b62f486c4887ddb2c5b21f9a2, type: 3}
       propertyPath: antagonistUpgradeController
       value: 
       objectReference: {fileID: 117022427}
@@ -18992,6 +20524,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 391062695}
     - target: {fileID: 1888815636112958737, guid: 6387628456cf38a479e1454d7c51030f, type: 3}
+      propertyPath: destructionSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 995344392c130b043905054730c5826c, type: 3}
+    - target: {fileID: 1888815636112958737, guid: 6387628456cf38a479e1454d7c51030f, type: 3}
       propertyPath: playerUpgradeController
       value: 
       objectReference: {fileID: 433986898}
@@ -19077,6 +20613,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 391062695}
     - target: {fileID: 2477567247822645261, guid: 2d798e4b62f486c4887ddb2c5b21f9a2, type: 3}
+      propertyPath: destructionSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 995344392c130b043905054730c5826c, type: 3}
+    - target: {fileID: 2477567247822645261, guid: 2d798e4b62f486c4887ddb2c5b21f9a2, type: 3}
       propertyPath: antagonistUpgradeController
       value: 
       objectReference: {fileID: 117022427}
@@ -19150,6 +20690,10 @@ PrefabInstance:
       propertyPath: scoreController
       value: 
       objectReference: {fileID: 391062695}
+    - target: {fileID: 1163950879292723797, guid: e495200837eedf84b82761c53dfe83a5, type: 3}
+      propertyPath: destructionSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 995344392c130b043905054730c5826c, type: 3}
     - target: {fileID: 1163950879292723797, guid: e495200837eedf84b82761c53dfe83a5, type: 3}
       propertyPath: playerUpgradeController
       value: 
@@ -19257,6 +20801,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 391062695}
     - target: {fileID: 1888815636112958737, guid: 6387628456cf38a479e1454d7c51030f, type: 3}
+      propertyPath: destructionSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 995344392c130b043905054730c5826c, type: 3}
+    - target: {fileID: 1888815636112958737, guid: 6387628456cf38a479e1454d7c51030f, type: 3}
       propertyPath: playerUpgradeController
       value: 
       objectReference: {fileID: 433986898}
@@ -19347,6 +20895,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 391062695}
     - target: {fileID: 1888815636112958737, guid: 6387628456cf38a479e1454d7c51030f, type: 3}
+      propertyPath: destructionSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 995344392c130b043905054730c5826c, type: 3}
+    - target: {fileID: 1888815636112958737, guid: 6387628456cf38a479e1454d7c51030f, type: 3}
       propertyPath: playerUpgradeController
       value: 
       objectReference: {fileID: 433986898}
@@ -19431,6 +20983,10 @@ PrefabInstance:
       propertyPath: scoreController
       value: 
       objectReference: {fileID: 391062695}
+    - target: {fileID: 2477567247822645261, guid: 2d798e4b62f486c4887ddb2c5b21f9a2, type: 3}
+      propertyPath: destructionSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 995344392c130b043905054730c5826c, type: 3}
     - target: {fileID: 2477567247822645261, guid: 2d798e4b62f486c4887ddb2c5b21f9a2, type: 3}
       propertyPath: playerUpgradeController
       value: 
@@ -20097,6 +21653,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 391062695}
     - target: {fileID: 1888815636112958737, guid: 6387628456cf38a479e1454d7c51030f, type: 3}
+      propertyPath: destructionSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 995344392c130b043905054730c5826c, type: 3}
+    - target: {fileID: 1888815636112958737, guid: 6387628456cf38a479e1454d7c51030f, type: 3}
       propertyPath: playerUpgradeController
       value: 
       objectReference: {fileID: 433986898}
@@ -20362,6 +21922,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 391062695}
     - target: {fileID: 2477567247822645261, guid: 2d798e4b62f486c4887ddb2c5b21f9a2, type: 3}
+      propertyPath: destructionSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 995344392c130b043905054730c5826c, type: 3}
+    - target: {fileID: 2477567247822645261, guid: 2d798e4b62f486c4887ddb2c5b21f9a2, type: 3}
       propertyPath: playerUpgradeController
       value: 
       objectReference: {fileID: 433986898}
@@ -20580,6 +22144,10 @@ PrefabInstance:
       propertyPath: scoreController
       value: 
       objectReference: {fileID: 391062695}
+    - target: {fileID: 2477567247822645261, guid: 2d798e4b62f486c4887ddb2c5b21f9a2, type: 3}
+      propertyPath: destructionSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 995344392c130b043905054730c5826c, type: 3}
     - target: {fileID: 2477567247822645261, guid: 2d798e4b62f486c4887ddb2c5b21f9a2, type: 3}
       propertyPath: antagonistUpgradeController
       value: 
@@ -20921,6 +22489,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 391062695}
     - target: {fileID: 2477567247822645261, guid: 2d798e4b62f486c4887ddb2c5b21f9a2, type: 3}
+      propertyPath: destructionSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 995344392c130b043905054730c5826c, type: 3}
+    - target: {fileID: 2477567247822645261, guid: 2d798e4b62f486c4887ddb2c5b21f9a2, type: 3}
       propertyPath: antagonistUpgradeController
       value: 
       objectReference: {fileID: 117022427}
@@ -21206,6 +22778,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 391062695}
     - target: {fileID: 1163950879292723797, guid: e495200837eedf84b82761c53dfe83a5, type: 3}
+      propertyPath: destructionSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 995344392c130b043905054730c5826c, type: 3}
+    - target: {fileID: 1163950879292723797, guid: e495200837eedf84b82761c53dfe83a5, type: 3}
       propertyPath: antagonistUpgradeController
       value: 
       objectReference: {fileID: 117022427}
@@ -21311,6 +22887,10 @@ PrefabInstance:
       propertyPath: scoreController
       value: 
       objectReference: {fileID: 391062695}
+    - target: {fileID: 1888815636112958737, guid: 6387628456cf38a479e1454d7c51030f, type: 3}
+      propertyPath: destructionSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 995344392c130b043905054730c5826c, type: 3}
     - target: {fileID: 1888815636112958737, guid: 6387628456cf38a479e1454d7c51030f, type: 3}
       propertyPath: playerUpgradeController
       value: 
@@ -21429,7 +23009,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8416981123240410865, guid: 5b15a9baead7cc245a445600b3a28beb, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8416981123240410865, guid: 5b15a9baead7cc245a445600b3a28beb, type: 3}
       propertyPath: m_LocalScale.x

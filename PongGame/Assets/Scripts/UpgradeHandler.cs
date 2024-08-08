@@ -23,6 +23,8 @@ public class UpgradeHandler : MonoBehaviour
     public delegate void UpgradeApplied(GameObject parent, int upgradeCount);
     public event UpgradeApplied OnUpgradeApplied;
 
+    private bool isSlowingTime = false;
+
     void Start()
     {
         if (playerUpgradeController == null)
@@ -89,6 +91,12 @@ public class UpgradeHandler : MonoBehaviour
         {
             Debug.LogError($"SpriteRenderer not found in {currentParent.name}.");
         }
+
+        // Slow down time
+        if (!isSlowingTime)
+        {
+            StartCoroutine(SlowTimeCoroutine());
+        }
     }
 
     private void CycleUpgradeParentBackward()
@@ -117,6 +125,12 @@ public class UpgradeHandler : MonoBehaviour
         else
         {
             Debug.LogError($"SpriteRenderer not found in {currentParent.name}.");
+        }
+
+        // Slow down time
+        if (!isSlowingTime)
+        {
+            StartCoroutine(SlowTimeCoroutine());
         }
     }
 
@@ -182,5 +196,14 @@ public class UpgradeHandler : MonoBehaviour
             return upgradeCounts[parent];
         }
         return 0;
+    }
+
+    private IEnumerator SlowTimeCoroutine()
+    {
+        isSlowingTime = true;
+        Time.timeScale = 0.5f; // Slow down time by 50%
+        yield return new WaitForSecondsRealtime(2f); // Wait for 2 seconds (real-time)
+        Time.timeScale = 1f; // Restore time to normal
+        isSlowingTime = false;
     }
 }
