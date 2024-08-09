@@ -41,6 +41,10 @@ public class BombBehaviour : MonoBehaviour
         {
             HandleBuildingCollision(collision);
         }
+
+        // Debugging information to monitor the velocity after collisions
+        Debug.Log("Collision Detected with: " + collision.gameObject.name);
+        Debug.Log("Velocity after collision: " + rb.velocity);
     }
 
     void HandleWallCollision(Collision2D collision)
@@ -118,7 +122,11 @@ public class BombBehaviour : MonoBehaviour
         if (rb.velocity.magnitude < initialSpeed)
         {
             rb.velocity = rb.velocity.normalized * initialSpeed;
+            Debug.Log("Velocity normalized to maintain speed.");
         }
+
+        // Prevent the ball from stopping or having very low velocities
+        PreventStuckBall();
     }
 
     void EnsureMovement()
@@ -142,6 +150,16 @@ public class BombBehaviour : MonoBehaviour
         newVelocity.y += Random.Range(-0.1f, 0.1f);
 
         rb.velocity = newVelocity.normalized * initialSpeed;
+    }
+
+    void PreventStuckBall()
+    {
+        // If the velocity is below a very low threshold, re-launch the ball
+        if (rb.velocity.magnitude < 0.1f)
+        {
+            Debug.LogWarning("Ball velocity is very low, re-launching...");
+            LaunchBall();
+        }
     }
 
     bool IsTravelingStraightLine()
