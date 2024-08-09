@@ -11,7 +11,8 @@ public class UpgradeHandler : MonoBehaviour
 
     private int currentIndex = -1; // Index of the current parent object
     private SpriteRenderer currentSpriteRenderer; // Current sprite renderer
-    private Color originalColor; // To store the original color
+    private Material originalMaterial; // To store the original material
+    public Material outlineMaterial; // Material with outline shader
 
     // Dictionary to keep track of the next upgrade index for each parent
     private Dictionary<GameObject, int> upgradeIndices = new Dictionary<GameObject, int>();
@@ -66,10 +67,10 @@ public class UpgradeHandler : MonoBehaviour
 
     private void CycleUpgradeParent()
     {
-        // Reset the color of the current sprite renderer if it exists
+        // Reset the material of the current sprite renderer if it exists
         if (currentSpriteRenderer != null)
         {
-            currentSpriteRenderer.color = originalColor;
+            currentSpriteRenderer.material = originalMaterial;
         }
 
         // Move to the next parent object in the list
@@ -81,11 +82,11 @@ public class UpgradeHandler : MonoBehaviour
 
         if (currentSpriteRenderer != null)
         {
-            // Store the original color
-            originalColor = currentSpriteRenderer.color;
+            // Store the original material
+            originalMaterial = currentSpriteRenderer.material;
 
-            // Change the sprite color to C19191 to highlight the current parent object
-            currentSpriteRenderer.color = new Color(0.756f, 0.569f, 0.569f); // RGB values for #C19191
+            // Change the sprite to use the outline material
+            currentSpriteRenderer.material = outlineMaterial;
         }
         else
         {
@@ -101,10 +102,10 @@ public class UpgradeHandler : MonoBehaviour
 
     private void CycleUpgradeParentBackward()
     {
-        // Reset the color of the current sprite renderer if it exists
+        // Reset the material of the current sprite renderer if it exists
         if (currentSpriteRenderer != null)
         {
-            currentSpriteRenderer.color = originalColor;
+            currentSpriteRenderer.material = originalMaterial;
         }
 
         // Move to the previous parent object in the list
@@ -116,11 +117,11 @@ public class UpgradeHandler : MonoBehaviour
 
         if (currentSpriteRenderer != null)
         {
-            // Store the original color
-            originalColor = currentSpriteRenderer.color;
+            // Store the original material
+            originalMaterial = currentSpriteRenderer.material;
 
-            // Change the sprite color to C19191 to highlight the current parent object
-            currentSpriteRenderer.color = new Color(0.756f, 0.569f, 0.569f); // RGB values for #C19191
+            // Change the sprite to use the outline material
+            currentSpriteRenderer.material = outlineMaterial;
         }
         else
         {
@@ -144,14 +145,11 @@ public class UpgradeHandler : MonoBehaviour
             // Check if the parent object has already been upgraded 3 times
             if (upgradeCounts[currentParent] >= 3)
             {
-                //Debug.Log($"No more upgrades allowed for {currentParent.name}.");
                 return;
             }
 
             if (playerUpgradeController.SpendUpgradePoints(4)) // Spend 4 points
             {
-                //Debug.Log("2 upgrade points spent.");
-
                 // Find the next child capsule to upgrade
                 int nextUpgradeIndex = upgradeIndices[currentParent];
                 if (nextUpgradeIndex < 3)
@@ -173,14 +171,6 @@ public class UpgradeHandler : MonoBehaviour
                         Debug.LogError($"Capsule {childName} not found in {currentParent.name}.");
                     }
                 }
-                else
-                {
-                    //Debug.Log("All capsules are already upgraded for this parent object.");
-                }
-            }
-            else
-            {
-                //Debug.Log("Not enough upgrade points available.");
             }
         }
         else

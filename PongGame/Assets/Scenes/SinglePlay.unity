@@ -13747,6 +13747,7 @@ MonoBehaviour:
   - {fileID: 805460423}
   - {fileID: 402576260}
   - {fileID: 1495516584}
+  outlineMaterial: {fileID: 2100000, guid: f65fe4c1b54ab9c4c910ea3dcb9cb30f, type: 2}
 --- !u!1001 &1136264926
 PrefabInstance:
   m_ObjectHideFlags: 0
