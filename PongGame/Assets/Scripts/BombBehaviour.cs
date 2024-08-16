@@ -43,8 +43,8 @@ public class BombBehaviour : MonoBehaviour
         }
 
         // Debugging information to monitor the velocity after collisions
-        Debug.Log("Collision Detected with: " + collision.gameObject.name);
-        Debug.Log("Velocity after collision: " + rb.velocity);
+        //Debug.Log("Collision Detected with: " + collision.gameObject.name);
+        //Debug.Log("Velocity after collision: " + rb.velocity);
     }
 
     void HandleWallCollision(Collision2D collision)
@@ -122,7 +122,7 @@ public class BombBehaviour : MonoBehaviour
         if (rb.velocity.magnitude < initialSpeed)
         {
             rb.velocity = rb.velocity.normalized * initialSpeed;
-            Debug.Log("Velocity normalized to maintain speed.");
+            //Debug.Log("Velocity normalized to maintain speed.");
         }
 
         // Prevent the ball from stopping or having very low velocities

@@ -105,7 +105,7 @@ public class UpgradeAssignment : MonoBehaviour
     {
         foreach (BarrierBehaviour barrierComponent in playerBarrier)
         {
-            barrierComponent.respawnTime = Mathf.Max(1, barrierComponent.respawnTime - (3f)); 
+            barrierComponent.respawnTime = Mathf.Max(1, barrierComponent.respawnTime - (4f)); 
             //Debug.Log($"Turret upgraded: Fire rate decreased by {3} seconds for turret {barrierComponent.name}.");
         }
     }
