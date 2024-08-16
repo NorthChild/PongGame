@@ -191,7 +191,7 @@ public class UpgradeHandler : MonoBehaviour
     private IEnumerator SlowTimeCoroutine()
     {
         isSlowingTime = true;
-        Time.timeScale = 0.1f; // Slow down time by 50%
+        Time.timeScale = 0.1f; // Slow down time by 90%
         yield return new WaitForSecondsRealtime(2f); // Wait for 2 seconds (real-time)
         Time.timeScale = 1f; // Restore time to normal
         isSlowingTime = false;

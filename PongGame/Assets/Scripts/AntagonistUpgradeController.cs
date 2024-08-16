@@ -9,12 +9,14 @@ public class AntagonistUpgradeController : MonoBehaviour
 
     private List<TurretBehavior> antagonistTurrets = new List<TurretBehavior>(); // List to hold all AntagonistTurret objects
     private List<BarrierBehaviour> antagonistBarriers = new List<BarrierBehaviour>(); // List to hold all AntagonistBarrier objects
+    private List<AdversaryBehavior> antagonistPlatform = new List<AdversaryBehavior>(); // List to hold all AntagonistBarrier objects
 
     void Start()
     {
         upgradeCounts["AntagonistBarrier"] = 0;
         upgradeCounts["AntagonistTurretFireRate"] = 0;
         upgradeCounts["AntagonistTurretBulletSpeed"] = 0;
+        upgradeCounts["AntagonistPlatformSpeed"] = 0;
 
         // Find all objects with the tag AntagonistTurret and add them to the list
         GameObject[] turrets = GameObject.FindGameObjectsWithTag("antagonistTurret");
@@ -37,6 +39,16 @@ public class AntagonistUpgradeController : MonoBehaviour
                 antagonistBarriers.Add(barrierComponent);
             }
         }
+
+        GameObject[] platforms = GameObject.FindGameObjectsWithTag("Antagonist");
+        foreach (GameObject platform in platforms)
+        {
+            AdversaryBehavior platformComponent = platform.GetComponent<AdversaryBehavior>();
+            if (platformComponent != null)
+            {
+                antagonistPlatform.Add(platformComponent);
+            }
+        }
     }
 
     public void PlayerBuildingDestroyed()
@@ -51,90 +63,158 @@ public class AntagonistUpgradeController : MonoBehaviour
     }
 
     // Method to show upgrade options to the player
+    //private void AddAdversaryUpgradePoints()
+    //{
+    //    Debug.Log("Adding Points");
+    //    List<GameObject> possibleTargets = new List<GameObject>();
+    //    possibleTargets.AddRange(GameObject.FindGameObjectsWithTag("AntagonistBarrier"));
+    //    possibleTargets.AddRange(GameObject.FindGameObjectsWithTag("antagonistTurret"));
+    //    possibleTargets.AddRange(GameObject.FindGameObjectsWithTag("Antagonist"));
+
+    //    if (possibleTargets.Count == 0)
+    //    {
+    //        Debug.LogWarning("No AntagonistBarrier, AntagonistTurret, or Antagonist objects found.");
+    //        return;
+    //    }
+
+    //    GameObject selectedObject = possibleTargets[Random.Range(0, possibleTargets.Count)];
+
+    //    if (selectedObject.CompareTag("AntagonistBarrier"))
+    //    {
+    //        if (upgradeCounts["AntagonistBarrier"] < 3)
+    //        {
+    //            ApplyBarrierUpgrade();
+    //            upgradeCounts["AntagonistBarrier"]++;
+    //        }
+    //        else
+    //        {
+    //            ApplyAvailableTurretUpgrade();
+    //        }
+    //    }
+    //    else if (selectedObject.CompareTag("antagonistTurret"))
+    //    {
+    //        if (upgradeCounts["AntagonistTurretFireRate"] < 3 || upgradeCounts["AntagonistTurretBulletSpeed"] < 3)
+    //        {
+    //            bool upgraded = false;
+    //            int attempts = 0;
+
+    //            while (!upgraded && attempts < 6)
+    //            {
+    //                int upgradeType = Random.Range(0, 2); // 0 for fireRate, 1 for bullet speed
+
+    //                if (upgradeType == 0 && upgradeCounts["AntagonistTurretFireRate"] < 3)
+    //                {
+    //                    ApplyTurretFireRateUpgrade();
+    //                    upgradeCounts["AntagonistTurretFireRate"]++;
+    //                    upgraded = true;
+    //                }
+    //                else if (upgradeType == 1 && upgradeCounts["AntagonistTurretBulletSpeed"] < 3)
+    //                {
+    //                    ApplyTurretBulletSpeedUpgrade();
+    //                    upgradeCounts["AntagonistTurretBulletSpeed"]++;
+    //                    upgraded = true;
+    //                }
+
+    //                attempts++;
+    //            }
+
+    //            if (!upgraded)
+    //            {
+    //                ApplyRemainingTurretUpgrade();
+    //            }
+    //        }
+    //        else
+    //        {
+    //            ApplyAvailableBarrierUpgrade();
+    //        }
+    //    }
+    //    else if (selectedObject.CompareTag("Antagonist"))
+    //    {
+    //        if (upgradeCounts["AntagonistPlatformSpeed"] < 3)
+    //        {
+    //            ApplyPlatformUpgrade();
+    //            upgradeCounts["AntagonistPlatformSpeed"]++;
+    //        }
+    //        else
+    //        {
+    //            // If platform upgrades are maxed out, fall back to upgrading turrets or barriers
+    //            ApplyAvailableTurretUpgrade();
+    //        }
+    //    }
+
+    //    if (AllUpgradesMaxed())
+    //    {
+    //        Debug.Log("No more available upgrades left.");
+    //    }
+    //}
+
     private void AddAdversaryUpgradePoints()
     {
         Debug.Log("Adding Points");
-        List<GameObject> possibleTargets = new List<GameObject>(2);
-        possibleTargets.AddRange(GameObject.FindGameObjectsWithTag("AntagonistBarrier"));
-        possibleTargets.AddRange(GameObject.FindGameObjectsWithTag("antagonistTurret"));
 
-        if (possibleTargets.Count == 0)
+        // Create a list of available upgrades that are not maxed out
+        List<string> availableUpgrades = new List<string>();
+
+        if (upgradeCounts["AntagonistBarrier"] < 3)
         {
-            Debug.LogWarning("No AntagonistBarrier or AntagonistTurret objects found.");
+            availableUpgrades.Add("AntagonistBarrier");
+        }
+        if (upgradeCounts["AntagonistTurretFireRate"] < 3)
+        {
+            availableUpgrades.Add("AntagonistTurretFireRate");
+        }
+        if (upgradeCounts["AntagonistTurretBulletSpeed"] < 3)
+        {
+            availableUpgrades.Add("AntagonistTurretBulletSpeed");
+        }
+        if (upgradeCounts["AntagonistPlatformSpeed"] < 3)
+        {
+            availableUpgrades.Add("AntagonistPlatformSpeed");
+        }
+
+        // If there are no upgrades available, all are maxed out
+        if (availableUpgrades.Count == 0)
+        {
+            Debug.Log("No more available upgrades left.");
             return;
         }
 
-        GameObject selectedObject = possibleTargets[Random.Range(0, possibleTargets.Count)];
+        // Randomly select one of the available upgrades
+        string selectedUpgrade = availableUpgrades[Random.Range(0, availableUpgrades.Count)];
 
-        if (selectedObject.CompareTag("AntagonistBarrier"))
+        // Apply the selected upgrade
+        switch (selectedUpgrade)
         {
-            //Debug.Log("Adding Points to barrier");
-            if (upgradeCounts["AntagonistBarrier"] < 3)
-            {
+            case "AntagonistBarrier":
                 ApplyBarrierUpgrade();
                 upgradeCounts["AntagonistBarrier"]++;
-                //Debug.Log("AntagonistBarrier upgrade applied: Decrease respawn time by 3f.");
-            }
-            else
-            {
-                //Debug.Log("AntagonistBarrier upgrades maxed out.");
-                ApplyAvailableTurretUpgrade();
-            }
-        }
-        else if (selectedObject.CompareTag("antagonistTurret"))
-        {
-            //Debug.Log("Adding Points to turret");
-            if (upgradeCounts["AntagonistTurretFireRate"] < 3 || upgradeCounts["AntagonistTurretBulletSpeed"] < 3)
-            {
-                bool upgraded = false;
-                int attempts = 0; // Add attempts counter
+                break;
 
-                while (!upgraded && attempts < 6) // Try a maximum of 6 times
-                {
-                    int upgradeType = Random.Range(0, 2); // 0 for fireRate, 1 for bullet speed
+            case "AntagonistTurretFireRate":
+                ApplyTurretFireRateUpgrade();
+                upgradeCounts["AntagonistTurretFireRate"]++;
+                break;
 
-                    if (upgradeType == 0 && upgradeCounts["AntagonistTurretFireRate"] < 3)
-                    {
-                        ApplyTurretFireRateUpgrade();
-                        upgradeCounts["AntagonistTurretFireRate"]++;
-                        upgraded = true;
-                        //Debug.Log("AntagonistTurret upgrade applied: Decrease fire rate by 3f.");
-                    }
-                    else if (upgradeType == 1 && upgradeCounts["AntagonistTurretBulletSpeed"] < 3)
-                    {
-                        ApplyTurretBulletSpeedUpgrade();
-                        upgradeCounts["AntagonistTurretBulletSpeed"]++;
-                        upgraded = true;
-                        //Debug.Log("AntagonistTurret upgrade applied: Increase bullet speed by 2.");
-                    }
+            case "AntagonistTurretBulletSpeed":
+                ApplyTurretBulletSpeedUpgrade();
+                upgradeCounts["AntagonistTurretBulletSpeed"]++;
+                break;
 
-                    attempts++;
-                }
-
-                if (!upgraded)
-                {
-                    //Debug.Log("AntagonistTurret upgrades maxed out.");
-                    ApplyRemainingTurretUpgrade();
-                }
-            }
-            else
-            {
-                //Debug.Log("AntagonistTurret upgrades maxed out.");
-                ApplyAvailableBarrierUpgrade();
-            }
-        }
-
-        if (AllUpgradesMaxed())
-        {
-            Debug.Log("No more available upgrades left.");
+            case "AntagonistPlatformSpeed":
+                ApplyPlatformUpgrade();
+                upgradeCounts["AntagonistPlatformSpeed"]++;
+                break;
         }
     }
+
+
 
     private bool AllUpgradesMaxed()
     {
         return upgradeCounts["AntagonistBarrier"] >= 3 &&
                upgradeCounts["AntagonistTurretFireRate"] >= 3 &&
-               upgradeCounts["AntagonistTurretBulletSpeed"] >= 3;
+               upgradeCounts["AntagonistTurretBulletSpeed"] >= 3 &&
+               upgradeCounts["AntagonistPlatformSpeed"] >= 3;
     }
 
     private void ApplyTurretFireRateUpgrade()
@@ -167,12 +247,30 @@ public class AntagonistUpgradeController : MonoBehaviour
         }
     }
 
+    private void ApplyPlatformUpgrade()
+    {
+        Debug.Log("Adding Points to platform speed");
+        foreach (AdversaryBehavior platformComponent in antagonistPlatform)
+        {
+            platformComponent.moveSpeed = Mathf.Max(1, platformComponent.moveSpeed + 4f);
+        }
+    }
+
     private void ApplyAvailableBarrierUpgrade()
     {
         if (upgradeCounts["AntagonistBarrier"] < 3)
         {
             ApplyBarrierUpgrade();
             upgradeCounts["AntagonistBarrier"]++;
+        }
+    }
+
+    private void ApplyAvailablePlatformUpgrade()
+    {
+        if (upgradeCounts["Antagonist"] < 3)
+        {
+            ApplyBarrierUpgrade();
+            upgradeCounts["Antagonist"]++;
         }
     }
 

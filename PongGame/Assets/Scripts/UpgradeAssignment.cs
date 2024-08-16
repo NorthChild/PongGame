@@ -7,7 +7,7 @@ public class UpgradeAssignment : MonoBehaviour
     public UpgradeHandler upgradeHandler; // Reference to the UpgradeHandler
     private List<TurretBehavior> playerTurrets = new List<TurretBehavior>(); // List to hold all playerTurret objects
     private List<BarrierBehaviour> playerBarrier = new List<BarrierBehaviour>(); // List to hold all playerTurret objects
-    //private List<PlatformBehavior> playerPlatform = new List<PlatformBehavior>(); // List to hold all playerTurret objects
+    private List<PlatformBehavior> playerPlatform = new List<PlatformBehavior>(); // List to hold all playerTurret objects
 
     void Start()
     {
@@ -41,15 +41,15 @@ public class UpgradeAssignment : MonoBehaviour
             }
         }
 
-        //GameObject[] platforms = GameObject.FindGameObjectsWithTag("Player");
-        //foreach (GameObject platform in platforms)
-        //{
-        //    PlatformBehavior plaformComponent = platform.GetComponent<PlatformBehavior>();
-        //    if (plaformComponent != null)
-        //    {
-        //        playerPlatform.Add(plaformComponent);
-        //    }
-        //}
+        GameObject[] platforms = GameObject.FindGameObjectsWithTag("Player");
+        foreach (GameObject platform in platforms)
+        {
+            PlatformBehavior plaformComponent = platform.GetComponent<PlatformBehavior>();
+            if (plaformComponent != null)
+            {
+                playerPlatform.Add(plaformComponent);
+            }
+        }
     }
 
     void OnDestroy()
@@ -70,9 +70,9 @@ public class UpgradeAssignment : MonoBehaviour
             case "barrierRegen":
                 ApplyBarrierUpgrade(upgradeCount);
                 break;
-            //case "paddleSpeed":
-            //    ApplyPlatformUpgrade(upgradeCount);
-            //    break;
+            case "paddleSpeed":
+                ApplyPlatformUpgrade(upgradeCount);
+                break;
             case "bulletSpeed":
                 ApplyBulletUpgrade(upgradeCount);
                 break;
@@ -110,14 +110,14 @@ public class UpgradeAssignment : MonoBehaviour
         }
     }
 
-    //private void ApplyPlatformUpgrade(int upgradeCount)
-    //{
-    //    foreach (PlatformBehavior platformComponent in playerPlatform)
-    //    {
-    //        platformComponent.moveSpeed = Mathf.Max(1, platformComponent.moveSpeed + (10f)); 
-    //        //Debug.Log($"Turret upgraded: Fire rate decreased by {10} seconds for turret {platformComponent.name}.");
-    //        Debug.Log(platformComponent.moveSpeed);
-    //    }
-    //}
+    private void ApplyPlatformUpgrade(int upgradeCount)
+    {
+        foreach (PlatformBehavior platformComponent in playerPlatform)
+        {
+            platformComponent.moveSpeed = Mathf.Max(1, platformComponent.moveSpeed + (4f));
+            //Debug.Log($"Turret upgraded: Fire rate decreased by {10} seconds for turret {platformComponent.name}.");
+            Debug.Log(platformComponent.moveSpeed);
+        }
+    }
 
 }
