@@ -8,13 +8,16 @@ public class AntagonistUpgradeController : MonoBehaviour
     private Dictionary<string, int> upgradeCounts = new Dictionary<string, int>();
 
     private List<TurretBehavior> antagonistTurrets = new List<TurretBehavior>(); // List to hold all AntagonistTurret objects
+    private List<AntiTurretBehavior> antagonistAntiTurrets = new List<AntiTurretBehavior>(); // List to hold all AntagonistTurret objects
     private List<BarrierBehaviour> antagonistBarriers = new List<BarrierBehaviour>(); // List to hold all AntagonistBarrier objects
     private List<AdversaryBehavior> antagonistPlatform = new List<AdversaryBehavior>(); // List to hold all AntagonistBarrier objects
+
 
     void Start()
     {
         upgradeCounts["AntagonistBarrier"] = 0;
         upgradeCounts["AntagonistTurretFireRate"] = 0;
+        upgradeCounts["AntagonistAntiTurretFireRate"] = 0;
         upgradeCounts["AntagonistTurretBulletSpeed"] = 0;
         upgradeCounts["AntagonistPlatformSpeed"] = 0;
 
@@ -26,6 +29,16 @@ public class AntagonistUpgradeController : MonoBehaviour
             if (turretComponent != null)
             {
                 antagonistTurrets.Add(turretComponent);
+            }
+        }
+
+        GameObject[] antiTurrets = GameObject.FindGameObjectsWithTag("antagonistAntiTurret");
+        foreach (GameObject antiTurret in antiTurrets)
+        {
+            AntiTurretBehavior antiTurretComponent = antiTurret.GetComponent<AntiTurretBehavior>();
+            if (antiTurretComponent != null)
+            {
+                antagonistAntiTurrets.Add(antiTurretComponent);
             }
         }
 
@@ -53,7 +66,7 @@ public class AntagonistUpgradeController : MonoBehaviour
 
     public void PlayerBuildingDestroyed()
     {
-        Debug.Log("Player building destroyed! Player can select an upgrade.");
+        //Debug.Log("Player building destroyed! Player can select an upgrade.");
         buildingsDestroyed++;
 
         if (buildingsDestroyed % 4 == 0)
@@ -163,6 +176,10 @@ public class AntagonistUpgradeController : MonoBehaviour
         {
             availableUpgrades.Add("AntagonistTurretFireRate");
         }
+        if (upgradeCounts["AntagonistAntiTurretFireRate"] < 3)
+        {
+            availableUpgrades.Add("AntagonistAntiTurretFireRate");
+        }
         if (upgradeCounts["AntagonistTurretBulletSpeed"] < 3)
         {
             availableUpgrades.Add("AntagonistTurretBulletSpeed");
@@ -195,6 +212,11 @@ public class AntagonistUpgradeController : MonoBehaviour
                 upgradeCounts["AntagonistTurretFireRate"]++;
                 break;
 
+            case "AntagonistAntiTurretFireRate":
+                ApplyAntiTurretFireRateUpgrade();
+                upgradeCounts["AntagonistTurretFireRate"]++;
+                break;
+
             case "AntagonistTurretBulletSpeed":
                 ApplyTurretBulletSpeedUpgrade();
                 upgradeCounts["AntagonistTurretBulletSpeed"]++;
@@ -207,15 +229,13 @@ public class AntagonistUpgradeController : MonoBehaviour
         }
     }
 
-
-
-    private bool AllUpgradesMaxed()
-    {
-        return upgradeCounts["AntagonistBarrier"] >= 3 &&
-               upgradeCounts["AntagonistTurretFireRate"] >= 3 &&
-               upgradeCounts["AntagonistTurretBulletSpeed"] >= 3 &&
-               upgradeCounts["AntagonistPlatformSpeed"] >= 3;
-    }
+    //private bool AllUpgradesMaxed()
+    //{
+    //    return upgradeCounts["AntagonistBarrier"] >= 3 &&
+    //           upgradeCounts["AntagonistTurretFireRate"] >= 3 &&
+    //           upgradeCounts["AntagonistTurretBulletSpeed"] >= 3 &&
+    //           upgradeCounts["AntagonistPlatformSpeed"] >= 3;
+    //}
 
     private void ApplyTurretFireRateUpgrade()
     {
@@ -223,6 +243,16 @@ public class AntagonistUpgradeController : MonoBehaviour
         foreach (TurretBehavior turretComponent in antagonistTurrets)
         {
             turretComponent.fireRate = Mathf.Max(1, turretComponent.fireRate - 3); // Ensure fireRate doesn't go below 1
+            //Debug.Log($"Turret upgraded: Fire rate decreased by 3 for turret {turretComponent.name}.");
+        }
+    }
+
+    private void ApplyAntiTurretFireRateUpgrade()
+    {
+        Debug.Log("Adding Points to anti turret fire rate");
+        foreach (AntiTurretBehavior antiTurretComponent in antagonistAntiTurrets)
+        {
+            antiTurretComponent.bulletSpeed = Mathf.Max(1, antiTurretComponent.bulletSpeed + 3); 
             //Debug.Log($"Turret upgraded: Fire rate decreased by 3 for turret {turretComponent.name}.");
         }
     }
@@ -256,49 +286,49 @@ public class AntagonistUpgradeController : MonoBehaviour
         }
     }
 
-    private void ApplyAvailableBarrierUpgrade()
-    {
-        if (upgradeCounts["AntagonistBarrier"] < 3)
-        {
-            ApplyBarrierUpgrade();
-            upgradeCounts["AntagonistBarrier"]++;
-        }
-    }
+    //private void ApplyAvailableBarrierUpgrade()
+    //{
+    //    if (upgradeCounts["AntagonistBarrier"] < 3)
+    //    {
+    //        ApplyBarrierUpgrade();
+    //        upgradeCounts["AntagonistBarrier"]++;
+    //    }
+    //}
 
-    private void ApplyAvailablePlatformUpgrade()
-    {
-        if (upgradeCounts["Antagonist"] < 3)
-        {
-            ApplyBarrierUpgrade();
-            upgradeCounts["Antagonist"]++;
-        }
-    }
+    //private void ApplyAvailablePlatformUpgrade()
+    //{
+    //    if (upgradeCounts["Antagonist"] < 3)
+    //    {
+    //        ApplyBarrierUpgrade();
+    //        upgradeCounts["Antagonist"]++;
+    //    }
+    //}
 
-    private void ApplyAvailableTurretUpgrade()
-    {
-        if (upgradeCounts["AntagonistTurretFireRate"] < 3)
-        {
-            ApplyTurretFireRateUpgrade();
-            upgradeCounts["AntagonistTurretFireRate"]++;
-        }
-        else if (upgradeCounts["AntagonistTurretBulletSpeed"] < 3)
-        {
-            ApplyTurretBulletSpeedUpgrade();
-            upgradeCounts["AntagonistTurretBulletSpeed"]++;
-        }
-    }
+    //private void ApplyAvailableTurretUpgrade()
+    //{
+    //    if (upgradeCounts["AntagonistTurretFireRate"] < 3)
+    //    {
+    //        ApplyTurretFireRateUpgrade();
+    //        upgradeCounts["AntagonistTurretFireRate"]++;
+    //    }
+    //    else if (upgradeCounts["AntagonistTurretBulletSpeed"] < 3)
+    //    {
+    //        ApplyTurretBulletSpeedUpgrade();
+    //        upgradeCounts["AntagonistTurretBulletSpeed"]++;
+    //    }
+    //}
 
-    private void ApplyRemainingTurretUpgrade()
-    {
-        if (upgradeCounts["AntagonistTurretFireRate"] < 3)
-        {
-            ApplyTurretFireRateUpgrade();
-            upgradeCounts["AntagonistTurretFireRate"]++;
-        }
-        else if (upgradeCounts["AntagonistTurretBulletSpeed"] < 3)
-        {
-            ApplyTurretBulletSpeedUpgrade();
-            upgradeCounts["AntagonistTurretBulletSpeed"]++;
-        }
-    }
+    //private void ApplyRemainingTurretUpgrade()
+    //{
+    //    if (upgradeCounts["AntagonistTurretFireRate"] < 3)
+    //    {
+    //        ApplyTurretFireRateUpgrade();
+    //        upgradeCounts["AntagonistTurretFireRate"]++;
+    //    }
+    //    else if (upgradeCounts["AntagonistTurretBulletSpeed"] < 3)
+    //    {
+    //        ApplyTurretBulletSpeedUpgrade();
+    //        upgradeCounts["AntagonistTurretBulletSpeed"]++;
+    //    }
+    //}
 }

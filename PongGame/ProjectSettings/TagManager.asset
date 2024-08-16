@@ -21,6 +21,10 @@ TagManager:
   - destroyedBuilding
   - playerBullet
   - antagonistBullet
+  - playerAntiTurret
+  - antagonistAntiTurret
+  - playerAntiTurretBullet
+  - antagonistAntiTurretBullet
   layers:
   - Default
   - TransparentFX
@@ -33,8 +37,8 @@ TagManager:
   - PlayerBarrier
   - AntagonistBarrier
   - Bomb
-  - 
-  - 
+  - playerAntiTurretBullet
+  - antagonistAntiTurretBullet
   - 
   - 
   - 

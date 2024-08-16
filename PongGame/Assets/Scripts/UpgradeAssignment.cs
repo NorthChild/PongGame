@@ -8,6 +8,7 @@ public class UpgradeAssignment : MonoBehaviour
     private List<TurretBehavior> playerTurrets = new List<TurretBehavior>(); // List to hold all playerTurret objects
     private List<BarrierBehaviour> playerBarrier = new List<BarrierBehaviour>(); // List to hold all playerTurret objects
     private List<PlatformBehavior> playerPlatform = new List<PlatformBehavior>(); // List to hold all playerTurret objects
+    private List<AntiTurretBehavior> playerAntiTurrets = new List<AntiTurretBehavior>(); // List to hold all playerTurret objects
 
     void Start()
     {
@@ -28,6 +29,16 @@ public class UpgradeAssignment : MonoBehaviour
             if (turretComponent != null)
             {
                 playerTurrets.Add(turretComponent);
+            }
+        }
+
+        GameObject[] antiTurrets = GameObject.FindGameObjectsWithTag("playerAntiTurret");
+        foreach (GameObject antiTurret in antiTurrets)
+        {
+            AntiTurretBehavior antiTurretComponent = antiTurret.GetComponent<AntiTurretBehavior>();
+            if (antiTurretComponent != null)
+            {
+                playerAntiTurrets.Add(antiTurretComponent);
             }
         }
 
@@ -76,6 +87,9 @@ public class UpgradeAssignment : MonoBehaviour
             case "bulletSpeed":
                 ApplyBulletUpgrade(upgradeCount);
                 break;
+            case "antiBulletSpeed":
+                ApplyAntiBulletUpgrade(upgradeCount);
+                break;
             // Add more cases for other upgrade types
             default:
                 Debug.LogWarning($"No upgrade logic defined for {parent.name}");
@@ -101,6 +115,15 @@ public class UpgradeAssignment : MonoBehaviour
         }
     }
 
+    private void ApplyAntiBulletUpgrade(int upgradeCount)
+    {
+        foreach (AntiTurretBehavior antiTurretComponent in playerAntiTurrets)
+        {
+            antiTurretComponent.bulletSpeed = Mathf.Max(1, antiTurretComponent.bulletSpeed + (3));
+            //Debug.Log($"Bullet upgraded: Bullet speed increased by {3} for turret {turretComponent.name}.");
+        }
+    }
+
     private void ApplyBarrierUpgrade(int upgradeCount)
     {
         foreach (BarrierBehaviour barrierComponent in playerBarrier)
@@ -116,7 +139,7 @@ public class UpgradeAssignment : MonoBehaviour
         {
             platformComponent.moveSpeed = Mathf.Max(1, platformComponent.moveSpeed + (4f));
             //Debug.Log($"Turret upgraded: Fire rate decreased by {10} seconds for turret {platformComponent.name}.");
-            Debug.Log(platformComponent.moveSpeed);
+            //Debug.Log(platformComponent.moveSpeed);
         }
     }
 
