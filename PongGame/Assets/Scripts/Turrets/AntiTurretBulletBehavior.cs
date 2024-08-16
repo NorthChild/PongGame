@@ -62,6 +62,7 @@ public class AntiTurretBulletBehavior : MonoBehaviour
             {
                 HandleCollision();
                 Destroy(collision.gameObject); // Destroy the enemy bullet
+                Debug.Log("antagonist bullet destroyed");
             }
             else
             {
@@ -83,6 +84,7 @@ public class AntiTurretBulletBehavior : MonoBehaviour
             {
                 HandleCollision();
                 Destroy(collision.gameObject); // Destroy the enemy bullet
+                Debug.Log("player bullet destroyed");
             }
             else
             {

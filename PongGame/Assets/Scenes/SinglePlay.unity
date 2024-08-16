@@ -10212,6 +10212,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 694056957750029886, guid: 2d798e4b62f486c4887ddb2c5b21f9a2, type: 3}
   m_PrefabInstance: {fileID: 833664033}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &834552730 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5556924162037808262, guid: b9e8cb676c1a379408559a434100fcd2, type: 3}
+  m_PrefabInstance: {fileID: 899995791}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &844038540
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10810,11 +10815,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5556924160518145225, guid: b9e8cb676c1a379408559a434100fcd2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -73.9484
+      value: -93.8
       objectReference: {fileID: 0}
     - target: {fileID: 5556924160518145225, guid: b9e8cb676c1a379408559a434100fcd2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -32.050766
+      value: -31.5
       objectReference: {fileID: 0}
     - target: {fileID: 5556924160518145225, guid: b9e8cb676c1a379408559a434100fcd2, type: 3}
       propertyPath: m_LocalPosition.z
@@ -10852,6 +10857,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: AAGun_lower
       objectReference: {fileID: 0}
+    - target: {fileID: 5556924162037808248, guid: b9e8cb676c1a379408559a434100fcd2, type: 3}
+      propertyPath: turretBase
+      value: 
+      objectReference: {fileID: 834552730}
     - target: {fileID: 5556924162037808248, guid: b9e8cb676c1a379408559a434100fcd2, type: 3}
       propertyPath: bulletSpeed
       value: 33
@@ -12261,11 +12270,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5556924160518145225, guid: b9e8cb676c1a379408559a434100fcd2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 133.20367
+      value: 162.4
       objectReference: {fileID: 0}
     - target: {fileID: 5556924160518145225, guid: b9e8cb676c1a379408559a434100fcd2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -32.050766
+      value: -33.2
       objectReference: {fileID: 0}
     - target: {fileID: 5556924160518145225, guid: b9e8cb676c1a379408559a434100fcd2, type: 3}
       propertyPath: m_LocalPosition.z
@@ -12303,6 +12312,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: AAGun_lower (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5556924162037808248, guid: b9e8cb676c1a379408559a434100fcd2, type: 3}
+      propertyPath: turretBase
+      value: 
+      objectReference: {fileID: 1302961169}
     - target: {fileID: 5556924162037808248, guid: b9e8cb676c1a379408559a434100fcd2, type: 3}
       propertyPath: bulletSpeed
       value: 33
@@ -15652,7 +15665,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5556924160518145225, guid: b9e8cb676c1a379408559a434100fcd2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -90.22258
+      value: -93.1
       objectReference: {fileID: 0}
     - target: {fileID: 5556924160518145225, guid: b9e8cb676c1a379408559a434100fcd2, type: 3}
       propertyPath: m_LocalPosition.y
@@ -16507,6 +16520,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1372127603809578377, guid: 6387628456cf38a479e1454d7c51030f, type: 3}
   m_PrefabInstance: {fileID: 1296198673}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &1302961169 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5556924162037808262, guid: b9e8cb676c1a379408559a434100fcd2, type: 3}
+  m_PrefabInstance: {fileID: 1013190032}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1304174143
 GameObject:
   m_ObjectHideFlags: 0
@@ -17072,11 +17090,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5556924160518145225, guid: b9e8cb676c1a379408559a434100fcd2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 149.82768
+      value: 156.5
       objectReference: {fileID: 0}
     - target: {fileID: 5556924160518145225, guid: b9e8cb676c1a379408559a434100fcd2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 136.28804
+      value: 137.1
       objectReference: {fileID: 0}
     - target: {fileID: 5556924160518145225, guid: b9e8cb676c1a379408559a434100fcd2, type: 3}
       propertyPath: m_LocalPosition.z

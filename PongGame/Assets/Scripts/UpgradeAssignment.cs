@@ -119,7 +119,7 @@ public class UpgradeAssignment : MonoBehaviour
     {
         foreach (AntiTurretBehavior antiTurretComponent in playerAntiTurrets)
         {
-            antiTurretComponent.bulletSpeed = Mathf.Max(1, antiTurretComponent.bulletSpeed + (3));
+            antiTurretComponent.fireRate = Mathf.Max(0.1f, antiTurretComponent.fireRate - 0.1f);
             //Debug.Log($"Bullet upgraded: Bullet speed increased by {3} for turret {turretComponent.name}.");
         }
     }
@@ -128,7 +128,7 @@ public class UpgradeAssignment : MonoBehaviour
     {
         foreach (BarrierBehaviour barrierComponent in playerBarrier)
         {
-            barrierComponent.respawnTime = Mathf.Max(1, barrierComponent.respawnTime - (4f)); 
+            barrierComponent.respawnTime = Mathf.Max(1, barrierComponent.respawnTime - (5f)); 
             //Debug.Log($"Turret upgraded: Fire rate decreased by {3} seconds for turret {barrierComponent.name}.");
         }
     }
