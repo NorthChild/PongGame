@@ -214,7 +214,7 @@ public class AntagonistUpgradeController : MonoBehaviour
 
             case "AntagonistAntiTurretFireRate":
                 ApplyAntiTurretFireRateUpgrade();
-                upgradeCounts["AntagonistTurretFireRate"]++;
+                upgradeCounts["AntagonistAntiTurretFireRate"]++;
                 break;
 
             case "AntagonistTurretBulletSpeed":
