@@ -11,7 +11,7 @@ public class UpgradeHandler : MonoBehaviour
 
     private int currentIndex = -1; // Index of the current parent object
     private SpriteRenderer currentSpriteRenderer; // Current sprite renderer
-    private Material originalMaterial; // To store the original material
+    private SpriteRenderer previousSpriteRenderer; // Previous sprite renderer to reset material
     public Material outlineMaterial; // Material with outline shader
 
     // Dictionary to keep track of the next upgrade index for each parent
@@ -20,7 +20,6 @@ public class UpgradeHandler : MonoBehaviour
     // Dictionary to keep track of the number of upgrades for each parent
     private Dictionary<GameObject, int> upgradeCounts = new Dictionary<GameObject, int>();
 
-    // Event to notify when an upgrade is applied
     public delegate void UpgradeApplied(GameObject parent, int upgradeCount);
     public event UpgradeApplied OnUpgradeApplied;
 
@@ -67,10 +66,10 @@ public class UpgradeHandler : MonoBehaviour
 
     private void CycleUpgradeParent()
     {
-        // Reset the material of the current sprite renderer if it exists
-        if (currentSpriteRenderer != null)
+        // Reset the material of the previous sprite renderer if it exists
+        if (previousSpriteRenderer != null)
         {
-            RestoreOriginalOrRemoveNotificationMaterial(upgradeParents[currentIndex]);
+            playerUpgradeController.RestoreMaterialAfterCycling(previousSpriteRenderer.gameObject);
         }
 
         // Move to the next parent object in the list
@@ -82,16 +81,22 @@ public class UpgradeHandler : MonoBehaviour
 
         if (currentSpriteRenderer != null)
         {
-            // Store the original material
-            originalMaterial = currentSpriteRenderer.material;
+            // Store the original material if not already stored
+            if (!playerUpgradeController.HasOriginalMaterial(currentParent))
+            {
+                playerUpgradeController.StoreOriginalMaterial(currentParent, currentSpriteRenderer.material);
+            }
 
-            // Apply the outline material, even if maxed out
+            // Change the sprite to use the outline material
             currentSpriteRenderer.material = outlineMaterial;
         }
         else
         {
             Debug.LogError($"SpriteRenderer not found in {currentParent.name}.");
         }
+
+        // Set previousSpriteRenderer to the current one
+        previousSpriteRenderer = currentSpriteRenderer;
 
         // Slow down time
         if (!isSlowingTime)
@@ -102,10 +107,10 @@ public class UpgradeHandler : MonoBehaviour
 
     private void CycleUpgradeParentBackward()
     {
-        // Reset the material of the current sprite renderer if it exists
-        if (currentSpriteRenderer != null)
+        // Reset the material of the previous sprite renderer if it exists
+        if (previousSpriteRenderer != null)
         {
-            RestoreOriginalOrRemoveNotificationMaterial(upgradeParents[currentIndex]);
+            playerUpgradeController.RestoreMaterialAfterCycling(previousSpriteRenderer.gameObject);
         }
 
         // Move to the previous parent object in the list
@@ -117,10 +122,13 @@ public class UpgradeHandler : MonoBehaviour
 
         if (currentSpriteRenderer != null)
         {
-            // Store the original material
-            originalMaterial = currentSpriteRenderer.material;
+            // Store the original material if not already stored
+            if (!playerUpgradeController.HasOriginalMaterial(currentParent))
+            {
+                playerUpgradeController.StoreOriginalMaterial(currentParent, currentSpriteRenderer.material);
+            }
 
-            // Apply the outline material, even if maxed out
+            // Change the sprite to use the outline material
             currentSpriteRenderer.material = outlineMaterial;
         }
         else
@@ -128,31 +136,13 @@ public class UpgradeHandler : MonoBehaviour
             Debug.LogError($"SpriteRenderer not found in {currentParent.name}.");
         }
 
+        // Set previousSpriteRenderer to the current one
+        previousSpriteRenderer = currentSpriteRenderer;
+
         // Slow down time
         if (!isSlowingTime)
         {
             StartCoroutine(SlowTimeCoroutine());
-        }
-    }
-
-    private void RestoreOriginalOrRemoveNotificationMaterial(GameObject obj)
-    {
-        SpriteRenderer spriteRenderer = obj.GetComponent<SpriteRenderer>();
-        if (spriteRenderer != null)
-        {
-            bool isMaxedOut = upgradeCounts[obj] >= 3;
-            if (isMaxedOut)
-            {
-                // Restore the original material when maxed out
-                if (playerUpgradeController.originalMaterials.ContainsKey(obj))
-                {
-                    spriteRenderer.material = playerUpgradeController.originalMaterials[obj];
-                }
-            }
-            else
-            {
-                playerUpgradeController.ApplyOrRemoveNotificationMaterial();
-            }
         }
     }
 
@@ -184,14 +174,8 @@ public class UpgradeHandler : MonoBehaviour
                         upgradeIndices[currentParent] = nextUpgradeIndex + 1;
                         upgradeCounts[currentParent]++;
 
-                        // Notify that an upgrade has been applied
+                        // Trigger the OnUpgradeApplied event after upgrading
                         OnUpgradeApplied?.Invoke(currentParent, upgradeCounts[currentParent]);
-
-                        // Restore the original material once maxed out
-                        if (upgradeCounts[currentParent] >= 3)
-                        {
-                            currentSpriteRenderer.material = playerUpgradeController.originalMaterials[currentParent];
-                        }
                     }
                     else
                     {

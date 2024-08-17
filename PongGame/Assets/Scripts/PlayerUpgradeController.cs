@@ -10,7 +10,7 @@ public class PlayerUpgradeController : MonoBehaviour
     public TextMeshProUGUI upgradePointsText;
     public List<GameObject> upgradeableObjects;
     public Material notificationOutlineMaterial;
-    public Dictionary<GameObject, Material> originalMaterials = new Dictionary<GameObject, Material>();
+    private Dictionary<GameObject, Material> originalMaterials = new Dictionary<GameObject, Material>();
     public UpgradeHandler upgradeHandler;
 
     public int TotalUpgradePoints
@@ -54,9 +54,34 @@ public class PlayerUpgradeController : MonoBehaviour
         return false;
     }
 
-    public void ApplyOrRemoveNotificationMaterial()
+    public void StoreOriginalMaterial(GameObject obj, Material material)
     {
-        if (notificationOutlineMaterial == null || upgradePointsText == null) return;
+        if (!originalMaterials.ContainsKey(obj))
+        {
+            originalMaterials[obj] = material;
+        }
+    }
+
+    public bool HasOriginalMaterial(GameObject obj)
+    {
+        return originalMaterials.ContainsKey(obj);
+    }
+
+    public void RestoreOriginalMaterial(GameObject obj)
+    {
+        if (originalMaterials.ContainsKey(obj))
+        {
+            SpriteRenderer spriteRenderer = obj.GetComponent<SpriteRenderer>();
+            if (spriteRenderer != null)
+            {
+                spriteRenderer.material = originalMaterials[obj];
+            }
+        }
+    }
+
+    private void ApplyOrRemoveNotificationMaterial()
+    {
+        if (notificationOutlineMaterial == null) return;
 
         bool shouldHighlight = totalUpgradePoints >= 4;
 
@@ -83,11 +108,27 @@ public class PlayerUpgradeController : MonoBehaviour
                     else
                     {
                         // Restore the original material when not highlighting or if maxed out
-                        if (originalMaterials.ContainsKey(obj))
-                        {
-                            spriteRenderer.material = originalMaterials[obj];
-                        }
+                        RestoreOriginalMaterial(obj);
                     }
+                }
+            }
+        }
+    }
+
+    public void RestoreMaterialAfterCycling(GameObject obj)
+    {
+        if (originalMaterials.ContainsKey(obj))
+        {
+            SpriteRenderer spriteRenderer = obj.GetComponent<SpriteRenderer>();
+            if (spriteRenderer != null)
+            {
+                if (totalUpgradePoints >= 4 && upgradeHandler.GetUpgradeCount(obj) < 3)
+                {
+                    spriteRenderer.material = notificationOutlineMaterial;
+                }
+                else
+                {
+                    spriteRenderer.material = originalMaterials[obj];
                 }
             }
         }
@@ -99,11 +140,7 @@ public class PlayerUpgradeController : MonoBehaviour
         {
             if (obj != null)
             {
-                SpriteRenderer spriteRenderer = obj.GetComponent<SpriteRenderer>();
-                if (spriteRenderer != null && originalMaterials.ContainsKey(obj))
-                {
-                    spriteRenderer.material = originalMaterials[obj];
-                }
+                RestoreOriginalMaterial(obj);
             }
         }
     }
