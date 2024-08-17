@@ -70,7 +70,7 @@ public class UpgradeHandler : MonoBehaviour
         // Reset the material of the current sprite renderer if it exists
         if (currentSpriteRenderer != null)
         {
-            currentSpriteRenderer.material = originalMaterial;
+            RestoreOriginalOrRemoveNotificationMaterial(upgradeParents[currentIndex]);
         }
 
         // Move to the next parent object in the list
@@ -85,7 +85,7 @@ public class UpgradeHandler : MonoBehaviour
             // Store the original material
             originalMaterial = currentSpriteRenderer.material;
 
-            // Change the sprite to use the outline material
+            // Apply the outline material, even if maxed out
             currentSpriteRenderer.material = outlineMaterial;
         }
         else
@@ -105,7 +105,7 @@ public class UpgradeHandler : MonoBehaviour
         // Reset the material of the current sprite renderer if it exists
         if (currentSpriteRenderer != null)
         {
-            currentSpriteRenderer.material = originalMaterial;
+            RestoreOriginalOrRemoveNotificationMaterial(upgradeParents[currentIndex]);
         }
 
         // Move to the previous parent object in the list
@@ -120,7 +120,7 @@ public class UpgradeHandler : MonoBehaviour
             // Store the original material
             originalMaterial = currentSpriteRenderer.material;
 
-            // Change the sprite to use the outline material
+            // Apply the outline material, even if maxed out
             currentSpriteRenderer.material = outlineMaterial;
         }
         else
@@ -132,6 +132,27 @@ public class UpgradeHandler : MonoBehaviour
         if (!isSlowingTime)
         {
             StartCoroutine(SlowTimeCoroutine());
+        }
+    }
+
+    private void RestoreOriginalOrRemoveNotificationMaterial(GameObject obj)
+    {
+        SpriteRenderer spriteRenderer = obj.GetComponent<SpriteRenderer>();
+        if (spriteRenderer != null)
+        {
+            bool isMaxedOut = upgradeCounts[obj] >= 3;
+            if (isMaxedOut)
+            {
+                // Restore the original material when maxed out
+                if (playerUpgradeController.originalMaterials.ContainsKey(obj))
+                {
+                    spriteRenderer.material = playerUpgradeController.originalMaterials[obj];
+                }
+            }
+            else
+            {
+                playerUpgradeController.ApplyOrRemoveNotificationMaterial();
+            }
         }
     }
 
@@ -165,6 +186,12 @@ public class UpgradeHandler : MonoBehaviour
 
                         // Notify that an upgrade has been applied
                         OnUpgradeApplied?.Invoke(currentParent, upgradeCounts[currentParent]);
+
+                        // Restore the original material once maxed out
+                        if (upgradeCounts[currentParent] >= 3)
+                        {
+                            currentSpriteRenderer.material = playerUpgradeController.originalMaterials[currentParent];
+                        }
                     }
                     else
                     {

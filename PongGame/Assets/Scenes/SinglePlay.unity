@@ -414,6 +414,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: gunTurret_base (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 1040246651559677524, guid: cddaf2e55c9e60848b4a3ca8368056c1, type: 3}
+      propertyPath: fireRate
+      value: 15
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cddaf2e55c9e60848b4a3ca8368056c1, type: 3}
 --- !u!4 &28259621 stripped
@@ -3932,6 +3936,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: gunTurret_base (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 1040246651559677524, guid: cddaf2e55c9e60848b4a3ca8368056c1, type: 3}
+      propertyPath: fireRate
+      value: 15
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cddaf2e55c9e60848b4a3ca8368056c1, type: 3}
 --- !u!4 &313787579 stripped
@@ -5780,7 +5788,7 @@ Transform:
   - {fileID: 366119054}
   - {fileID: 1235334747}
   m_Father: {fileID: 1974813948}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &402576262
 SpriteRenderer:
@@ -6407,6 +6415,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   upgradePointsText: {fileID: 1242739797}
+  upgradeableObjects:
+  - {fileID: 1710407286}
+  - {fileID: 755313658}
+  - {fileID: 805460423}
+  - {fileID: 402576260}
+  - {fileID: 1495516584}
+  notificationOutlineMaterial: {fileID: 2100000, guid: d99c6bb06d222af4ca23e78961e58c69, type: 2}
+  upgradeHandler: {fileID: 1125563575}
 --- !u!1001 &471552461
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18172,7 +18188,7 @@ Transform:
   - {fileID: 570469232}
   - {fileID: 1962748906}
   m_Father: {fileID: 1974813948}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1495516587
 MonoBehaviour:
@@ -19424,6 +19440,10 @@ PrefabInstance:
     - target: {fileID: 1040246649797630021, guid: cddaf2e55c9e60848b4a3ca8368056c1, type: 3}
       propertyPath: m_Name
       value: gunTurret_base (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1040246651559677524, guid: cddaf2e55c9e60848b4a3ca8368056c1, type: 3}
+      propertyPath: fireRate
+      value: 15
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cddaf2e55c9e60848b4a3ca8368056c1, type: 3}
@@ -22782,8 +22802,8 @@ Transform:
   - {fileID: 1710407287}
   - {fileID: 755313659}
   - {fileID: 805460424}
-  - {fileID: 1495516586}
   - {fileID: 402576261}
+  - {fileID: 1495516586}
   m_Father: {fileID: 945905821}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
